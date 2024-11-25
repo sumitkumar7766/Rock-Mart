@@ -1,0 +1,1956 @@
+body {
+    width: 1599px;
+    background-color: rgb(217, 217, 217);
+    margin: auto;
+}
+
+.mainhead {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background-color: black;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 152px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.Rock {
+    margin: 0px;
+    padding: 0px;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: rgb(255, 187, 0);
+    height: 35px;
+    text-decoration: none;
+    font-family: "Londrina Sketch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+}
+
+#Rock {
+    text-decoration: none;
+}
+
+.Extra {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.5rem;
+    color: rgb(255, 51, 0);
+    cursor: pointer;
+}
+
+#Extra {
+    text-decoration: none;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search:hover {
+    border: 1px solid yellow;
+}
+
+.magnifing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    font-size: 1.4rem;
+    background-color: orange;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+
+}
+
+#cars {
+    height: 40px;
+    width: 70px;
+    font-weight: bolder;
+    border: none;
+    text-align: center;
+    background-color: rgb(217, 217, 217);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+
+.searchproduct {
+    height: 38px;
+    width: 500px;
+    border: none;
+    background-color: rgb(217, 217, 217);
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 50px;
+    width: 100px;
+    border-radius: 3px;
+}
+
+.login:hover {
+    border: 1px solid white;
+}
+
+.userlogo {
+    color: white;
+    font-size: 1.7rem;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.loginbut {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-left: 3px;
+}
+
+.accsection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 43px;
+    width: 140px;
+    border-radius: 3px;
+    border-radius: 5px;
+}
+
+.celender {
+    color: white;
+    font-size: 1.9rem;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.accsection1 {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.accsection:hover {
+    border: 2px solid white;
+}
+
+.location {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 85px;
+    border-radius: 5px;
+}
+
+.location:hover {
+    border: 2px solid white;
+}
+
+.locationlogo {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 3px;
+    text-decoration: none;
+    color: white;
+}
+
+.Delever {
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 75px;
+    border-radius: 5px;
+}
+
+.cart:hover {
+    border: 2px solid white;
+}
+
+.cartlogo {
+    color: white;
+    font-size: 1.7rem;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.cartlist {
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 95px;
+    border-radius: 5px;
+}
+
+.order:hover {
+    border: 2px solid white;
+}
+
+.orderlogo {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.return {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(54, 54, 54);
+}
+
+.all {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.all:hover {
+    color: red;
+}
+
+.contact:hover {
+    color: red;
+}
+
+.contact {
+    margin-left: 200px;
+    color: white;
+    text-decoration: none;
+}
+
+.imageslider {
+    cursor: pointer;
+    width: 100%;
+    height: 300px;
+    background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/2024/Cons/Jupiter/Pets/Phase1/Hero/PC/PC_Hero_3000x1200_03_3._CB562345280_.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    animation: changeImage 20s 2s linear infinite;
+}
+
+@keyframes changeImage {
+    0% {
+        background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/2024/Cons/Jupiter/Pets/Phase1/Hero/PC/PC_Hero_3000x1200_03_3._CB562345280_.jpg);
+    }
+
+    20% {
+        background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/img23/PB/March/Bikram/PC_Hero_3000x1200_Lifestyle_KITCHEN._CB562081009_.jpg);
+    }
+
+    35% {
+        background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/img24/Beauty/GW/Jupiter/KSD/PEA/Updated/Makeupfg._CB562159640_.jpg);
+    }
+
+    55% {
+        background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/Meghana/Budget/NEw/D156384865_WLD-Jupiter24_Central-Inputs_Design-SIM-PC_Hero_3000x1200._CB562885398_.jpg);
+    }
+
+    75% {
+        background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/img24/Jupiter/PC_Hero_3000x1200-2X._CB562883499_.jpg);
+    }
+
+    90% {
+        background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/Jupiter24/Phase1/Gateway/Event/Unrec-3000x1200._CB562521064_.jpg);
+    }
+
+    99% {
+        background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/img24/Consumables/Jupiter/GW/Phase1/Cons_Unrec_event_PC_Hero_3000x1200_V2._CB562554030_.jpg);
+    }
+}
+
+.product {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.box {
+    border-radius: 10px;
+    height: 500px;
+    width: 370px;
+    margin-top: 30px;
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.box:hover {
+    border: 1px solid orangered;
+}
+
+.mobile {
+    font-size: 2rem;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 20px;
+    margin-left: 15px;
+    font-weight: bolder;
+}
+
+.phoneimg {
+    height: 90%;
+    width: 95%;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.See {
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+
+.slide {
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    align-items: end;
+}
+
+.min {
+    background-color: white;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.minimun {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    font-weight: bolder;
+    color: orangered;
+}
+
+.leftbut {
+    height: 300px;
+    width: 60px;
+    font-size: 5rem;
+    border: none;
+    transition: 1s;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.leftbut:hover {
+    background-color: orangered;
+}
+
+.rightbut {
+    height: 300px;
+    width: 60px;
+    font-size: 5rem;
+    border: none;
+    transition: 1s;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.rightbut1 {
+    height: 400px;
+    width: 60px;
+    font-size: 5rem;
+    border: none;
+    transition: 1s;
+    cursor: pointer;
+    background-color: transparent;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.leftbut1 {
+    height: 400px;
+    width: 60px;
+    font-size: 5rem;
+    border: none;
+    transition: 1s;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.leftbut1:hover {
+    background-color: orangered;
+}
+
+
+.rightbut:hover {
+    background-color: orangered;
+}
+
+.rightbut1:hover {
+    background-color: orangered;
+}
+
+.box1 {
+    width: 15%;
+    height: 95%;
+    border: 1px solid black;
+    position: absolute;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.box1:hover {
+    background-color: yellow;
+}
+
+.but2 {
+    align-items: end;
+}
+
+.boxmain {
+    margin: 0px;
+    padding: 0px;
+    width: 95%;
+    height: 300px;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.offer {
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.box1 img {
+    height: 220px;
+    width: 170px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.blockbusterdell {
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    align-items: end;
+}
+
+.slidbox {
+    margin: 0px;
+    padding: 0px;
+    width: 95%;
+    height: 400px;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.box2 {
+    width: 20%;
+    height: 95%;
+    border: 1px solid black;
+    position: absolute;
+    transition: 1s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.box2:hover {
+    background-color: yellow;
+}
+
+.min1 {
+    background-color: white;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.minimun1 {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    font-weight: bolder;
+    color: orangered;
+}
+
+.box2 img {
+    height: 250px;
+    border-radius: 10px;
+}
+
+.off {
+    background-color: #cc0c39;
+    color: white;
+    height: 25px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+.off1 {
+    color: #cc0c39;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0px;
+    margin-left: 10px;
+    width: 50%;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+    margin: 0px;
+    margin-right: 10px;
+}
+
+.mrp {
+    margin-right: 5px;
+    margin: 0px;
+
+}
+
+.mrpval {
+    text-decoration: line-through;
+    margin: 0px;
+    margin-left: 3px;
+}
+
+.detail {
+    margin: 0px;
+}
+
+.detail0 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+
+}
+
+.img99 {
+    display: flex;
+    width: 95%;
+    position: relative;
+    overflow: hidden;
+    transition: 2s;
+}
+
+.deal99 {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    height: 230px;
+}
+
+.but3 {
+    height: 200px;
+    width: 50px;
+    font-size: 3rem;
+    transition: 1s;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.but3:hover {
+    background-color: orangered;
+}
+
+.but4 {
+    height: 200px;
+    width: 50px;
+    font-size: 3rem;
+    transition: 1s;
+    border-radius: 10px;
+    position: end;
+    border: none;
+    background-color: transparent;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.butright3 {
+    position: end;
+    cursor: pointer;
+}
+
+.but4:hover {
+    background-color: orangered;
+}
+
+.box3 {
+    height: 200px;
+    width: 250px;
+    /* border: 1px solid black; */
+    position: absolute;
+    margin-top: 10px;
+    transition: 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.box3 img {
+    height: 200px;
+    width: 250px;
+}
+
+.slidemob {
+    height: 220px;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.box4 {
+    height: 200px;
+    width: 200px;
+    margin-top: 10px;
+    position: absolute;
+    transition: 2s;
+    cursor: pointer;
+}
+
+.imgmob {
+    height: 220px;
+    width: 95%;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobleftbut {
+    height: 200px;
+    width: 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: 1s;
+    font-size: 3rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.mobrightbut {
+    height: 200px;
+    width: 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: 1s;
+    font-size: 3rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.mobleftbut:hover {
+    background-color: orangered;
+}
+
+.mobrightbut:hover {
+    background-color: orangered;
+}
+
+.mobimg img {
+    height: 200px;
+}
+
+
+.backtotop {
+    height: 80px;
+    width: 100%;
+    margin: none;
+    border: none;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #314257;
+    cursor: pointer;
+}
+
+.footerdetail {
+    height: 350px;
+    width: 100%;
+    background-color: #232F3E;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box5 {
+    height: 260px;
+    width: 15%;
+    margin-top: 50px;
+    background-color: transparent;
+    /* background-color: white; */
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box5 h2 {
+    width: 150px;
+    font-weight: bolder;
+}
+
+.box5 a {
+    margin-top: 10px;
+    width: 150px;
+    text-decoration: none;
+    color: rgb(211, 206, 206);
+}
+
+.box6 {
+    height: 260px;
+    width: 17%;
+    margin-top: 50px;
+    background-color: transparent;
+    /* background-color: white; */
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+}
+
+.box6 h2 {
+    width: 100%;
+    font-weight: bolder;
+}
+
+
+.box6 a {
+    margin-top: 10px;
+    width: 100%;
+    text-decoration: none;
+    color: rgb(211, 206, 206);
+    margin-left: 0px;
+    align-items: start;
+}
+
+.box5 a:hover {
+    text-decoration: underline;
+    color: yellow;
+}
+
+.box6 a:hover {
+    text-decoration: underline;
+    color: yellow;
+}
+
+.rocklogo {
+    width: 100%;
+    height: 100px;
+    background-color: #232e3b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgb(126, 124, 124);
+}
+
+.box7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 10%;
+    background-color: transparent;
+    color: black;
+    margin-left: 50px;
+}
+
+.custom-select {
+    text-align: center;
+    margin-left: 50px;
+    border-radius: 10px;
+}
+
+.selectlang {
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+
+.selectlang option {
+    color: #cc0c39;
+}
+
+.selectlang option:hover {
+    background-color: red;
+}
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.select-selected {
+    background-color: DodgerBlue;
+    border-radius: 10px;
+}
+
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+.select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.box8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 7%;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(98, 97, 97);
+    margin-left: 50px;
+    border-radius: 5px;
+}
+
+.box8 img {
+    height: 20px;
+}
+
+.box8 p {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.fiiterdetail {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #131A22;
+}
+
+.fiiterdetail1 {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #131A22;
+    margin-top: 200px;
+}
+
+.box9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 500px;
+    flex-wrap: wrap;
+}
+
+.box9 a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.box9 a:hover {
+    text-decoration: underline;
+}
+
+.box9 p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.logindesign {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signupdesign {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box10 {
+    height: 98%;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 40px;
+}
+
+.box11 {
+    height: 98%;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 40px;
+}
+
+.box10 h1 {
+    margin-left: 20px;
+    font-size: 2rem;
+}
+
+.box11 h1 {
+    margin-left: 20px;
+    font-size: 2rem;
+}
+
+.emailormobile {
+    font-size: 1.1rem;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+
+.emailormobile1 {
+    font-size: 1.2rem;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+
+.emailormobile2 {
+    font-size: 1.2rem;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+
+
+.emailmobileinput {
+    margin: 0px;
+    margin-left: 20px;
+    margin-top: 5px;
+    height: 30px;
+    width: 400px;
+    box-shadow: rgb(18, 157, 204) inset;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.emailmobileinput1 {
+    margin: 0px;
+    margin-left: 20px;
+    margin-top: 5px;
+    height: 30px;
+    width: 400px;
+    box-shadow: rgb(18, 157, 204) inset;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.passwordemailmobil {
+    margin: 0px;
+    margin-left: 20px;
+    margin-top: 5px;
+    height: 30px;
+    width: 400px;
+    box-shadow: rgb(18, 157, 204) inset;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.Entername {
+    margin: 0px;
+    margin-left: 20px;
+    margin-top: 5px;
+    height: 30px;
+    width: 400px;
+    box-shadow: rgb(18, 157, 204) inset;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.butsub {
+    height: 45px;
+    width: 410px;
+    margin-left: 20px;
+    margin-top: 10px;
+    background-color: #ffcd50;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.subbut {
+    height: 45px;
+    width: 410px;
+    margin-left: 20px;
+    margin-top: 10px;
+    background-color: #ffcd50;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.logindesign button:hover {
+    background-color: #ffc32b;
+}
+
+.byagree {
+    margin-left: 20px;
+    font-size: 1.1rem;
+    font-weight: 550;
+}
+
+.Creat {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 80px;
+    border-top: 0.5px solid black;
+    padding: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.acountcreatbut {
+    margin-left: 20px;
+    width: 450px;
+    margin-right: 20px;
+    height: 40px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    box-shadow: #131A22;
+    cursor: pointer;
+}
+
+.lest1char {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 25px;
+    color: red;
+}
+
+.mobilenumalert {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 25px;
+    color: red;
+    font-size: 0.5rem;
+}
+
+.mobilenum {
+    font-size: 1.1rem;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bolder;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.mobilenumalert {
+    font-size: 1.1rem;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bolder;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.selectbut {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#countriescode {
+    height: 35px;
+    width: 120px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.mobilenumber {
+    margin-left: 20px;
+    height: 30px;
+    width: 260px;
+    box-shadow: rgb(18, 157, 204) inset;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.Password {
+    margin: 0px;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.paswordsignup {
+    margin: 0px;
+    margin-left: 20px;
+    margin-top: 5px;
+    height: 30px;
+    width: 400px;
+    box-shadow: rgb(18, 157, 204) inset;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.enterpass {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 25px;
+    color: red;
+
+}
+
+.toverifyst {
+    margin: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+
+.verifybutmob {
+    margin-left: 20px;
+    width: 450px;
+    margin-right: 20px;
+    margin-top: 30px;
+    height: 40px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    box-shadow: #131A22;
+    background-color: #ffc32b;
+    cursor: pointer;
+}
+
+.otp {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 430px;
+    height: 30px;
+    text-align: center;
+    background-color: rgb(237, 235, 235);
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.box12 {
+    height: 48%;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 40px;
+}
+
+.box12 h1 {
+    margin-left: 20px;
+    font-size: 2rem;
+}
+
+.alertotplength {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 22px;
+    margin-top: 3px;
+    color: red;
+}
+
+.box13 {
+    height: 42%;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 40px;
+}
+
+.box13 h1 {
+    margin-left: 20px;
+    font-size: 2rem;
+}
+
+.verifotpimg {
+    height: 80px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.congra {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.congra p {
+    font-size: 1.5rem;
+    color: blue;
+    margin: 0px;
+    font-weight: bolder;
+}
+
+.continuelogin {
+    height: 30px;
+    margin-top: 20px;
+    background-color: orange;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.brand {
+    color: orangered;
+    text-align: center;
+    text-decoration: underline;
+    word-spacing: 2px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    margin: 0px;
+    margin-top: 20px;
+
+}
+
+.catergryofmob {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f8da8e;
+}
+
+.mobiledetail {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center; */
+    background-color: white;
+}
+
+.mobiledetail1 {
+    background-color: white;
+}
+
+.mobileadver {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.mobileadver1 {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.box14 {
+    height: 500px;
+    width: 365px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.mobileimg {
+    height: 500px;
+    border-radius: 10px;
+}
+
+.box15 {
+    height: 223 0px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    /* align-items: center; */
+    border-radius: 10px;
+    /* border: 1px solid black; */
+}
+
+.phonepic {
+    height: 600px;
+}
+
+.imgred {
+    display: flex;
+}
+
+.imgred button {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 20px;
+    height: 30px;
+    width: 30px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+}
+
+.phonedetail {
+    width: 900px;
+    /* border: 1px solid black; */
+    margin-left: 10px;
+}
+
+.phonename {
+    font-size: 2.5rem;
+    text-align: justify;
+    margin: 0px;
+    padding: 0px;
+}
+
+.brandredmi {
+    margin-top: 20px;
+    color: #007185;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.brandredmi:hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.rating {
+    display: flex;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 5px;
+
+}
+
+.rate {
+    margin: 0px;
+    padding: 0px;
+}
+
+.star {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 8px;
+}
+
+.rating1793 {
+    margin-left: 30px;
+    color: #007185;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.rating1793:hover {
+    color: red;
+    text-decoration: underline;
+    font-size: 1.22rem;
+}
+
+.a1 {
+    margin-left: 20px;
+    ;
+    color: #007185;
+    text-decoration: none;
+}
+
+.a2 {
+    margin-left: 20px;
+    color: #007185;
+    text-decoration: none;
+}
+
+.a2:hover {
+    color: red;
+    text-decoration: underline;
+    font-size: 1.22rem;
+}
+
+.k5 {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    display: flex;
+}
+
+.greatindiafestival {
+    margin-top: 10px;
+    border-top: 1px solid black;
+
+}
+
+.great {
+    margin-top: 20px;
+    height: 35px;
+    width: 200px;
+    border: none;
+    background-color: #CC0C39;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.percost {
+    font-size: 2rem;
+    margin: 0px;
+    margin-top: 5px;
+    color: red;
+}
+
+.cost1 {
+    font-size: 1rem;
+    margin: 0px;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-weight: bolder;
+}
+
+.cost2 {
+    font-size: 2rem;
+    margin: 0px;
+    margin-top: 5px;
+    font-weight: bolder;
+}
+
+.mrpmob1 {
+    margin: 0px;
+
+}
+
+.mrpmob2 {
+    margin: 0px;
+    margin-left: 3px;
+    text-decoration: line-through;
+}
+
+.taxinclude {
+    font-size: 1.2rem;
+    margin: 0px;
+    margin-top: 5px;
+    color: rgb(69, 68, 68);
+    font-weight: 600;
+}
+
+.Coupon {
+    height: 25px;
+    width: 100px;
+    font-size: 15px;
+    font-weight: bolder;
+    border: none;
+    background-color: #FF9900;
+    border-radius: 5px;
+}
+
+.applycoupun {
+    margin: 0px;
+    margin-left: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.policyretuen {
+    margin: 0px;
+    margin-top: 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box16 {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 71px;
+    width: 85px;
+    padding-bottom: 25px;
+}
+
+.returnimg {
+    height: 35px;
+    width: 35px;
+}
+
+.serviceretuen {
+    font-size: 0.7rem;
+    color: blue;
+}
+
+.detailingofbrand {
+    margin: 0px;
+    margin-top: 10px;
+}
+
+.aboutthiaitem {
+    margin-left: 10px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.ulproduct {
+    margin: 0px;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    word-break: break-all;
+    word-spacing: 11%;
+    text-align: justify;
+    margin-bottom: 0px;
+}
+
+.buyorchart {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+}
+
+.buyorchart button {
+    height: 50px;
+    width: 40%;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.3rem;
+    background-color: #FF9900;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+
+.featureimg {
+    margin: 0px;
+    margin-top: 10px;
+}
+
+.manufacturer {
+    margin-top: 15px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.box17 {
+    width: 100%;
+    height: 370px;
+    display: flex;
+    justify-content: center;
+}
+
+.box17img {
+    height: 368px;
+}
+
+.yourcart {
+    text-align: center;
+    color: black;
+    font-size: 3rem;
+    text-decoration: underline;
+    margin: 50px;
+    font-weight: bolder;
+}
+
+.RECOMMENDED {
+    margin: 0px;
+    font-size: 1.3rem;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.container {
+    margin: 0px;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.container input {
+    margin: 0px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.box18 {
+    height: 80px;
+    /* border: 0.3px solid black; */
+    font-size: 2rem;
+    margin: 0px;
+    margin-left: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+
+.box18:hover {
+    border: 1px solid orangered;
+}
+
+.codtext {
+    margin: 0px;
+    font-size: 10px;
+    margin-left: 80px;
+    padding: 0px;
+    color: green;
+}
+
+.addresh {
+    display: flex;
+}
+
+.add1 {
+    margin-right: 300px;
+}
+
+.add2 {
+    width: 300px;
+    margin-right: 300px;
+
+}
+
+.add4 {
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+}
+
+.selectpay {
+    font-size: 1.2rem;
+    margin-left: 60px;
+    font-weight: bolder;
+}
+
+.paymentmethod {
+    height: auto;
+    border: 1px solid black;
+    width: 80%;
+    margin-left: 180px;
+    border-radius: 10px;
+}
+
+.QRpay {
+    height: 190px;
+}
+
+.box19 {
+    height: 200px;
+    /* border: 0.3px solid black; */
+    font-size: 2rem;
+    margin: 0px;
+    margin-left: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+
+.box20 {
+    height: 100px;
+    /* border: 0.3px solid black; */
+    font-size: 2rem;
+    margin: 0px;
+    margin-left: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+
+.box20:hover {
+    border: 0.5px solid orangered;
+}
+
+.addadresh {
+    height: 40px;
+    font-size: 1.2rem;
+    width: 80%;
+    margin-left: 180px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.changebut {
+    height: 35px;
+    width: 100px;
+    border: none;
+    margin-left: 20px;
+    background-color: orange;
+    margin: 0px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.placeorder {
+    height: 60px;
+    width: 200px;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: orangered;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.mobiledetail2 {
+    background-color: white;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.box21 {
+    height: 250px;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box21 h1 {
+    margin: 0px;
+    margin-bottom: 0px;
+}

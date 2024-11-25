@@ -1,0 +1,186 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.macdiv {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.mac1 {
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+.mac2 {
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+
+}
+.mac3 {
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+
+}
+.mac4 {
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+
+}
+.mac5 {
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+
+}
+.mac6 {
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+
+}
+.mac7 {
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    border: none;
+    cursor: pointer;
+
+}
+.mac8 {
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    border: none;
+    cursor: pointer;
+
+}
+.mac9 {
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    border: none;
+    cursor: pointer;
+
+}
+.mac1img {
+    height: 200px;
+    margin-top: 20px;
+}
+.macdetail {
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: bolder;
+}
+.boughtrate {
+    color: rgb(108, 107, 107);
+    width: 100%;
+    text-align: center;
+}
+.limitedbut {
+    height: 45px;
+    width: 150px;
+    font-size: 1rem;
+    border: none;
+    background-color: orangered;
+    color: white;
+    font-weight: bolder;
+    border-radius: 5px;
+    text-align: center;
+}
+.pricemac {
+    width: 100%;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.detailofmac {
+    color: blue;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.minm11 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 2rem;
+    margin-top: 2px;
+    color: red;
+    margin-left: 20px;
+}

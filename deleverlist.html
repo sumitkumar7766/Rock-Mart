@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Mart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap" rel="stylesheet">
+    <style>
+        .sooncome {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bolder;
+            color: orangered;
+        }
+
+        .gohome {
+            height: 50px;
+            width: 200px;
+            color: orangered;
+            background-color: rgb(145, 143, 143);
+            font-size: 1.5rem;
+            border-radius: 10px;
+            border: none;
+            font-weight: bolder;
+            text-align: center;
+            justify-content: center;
+            margin-left: 43%;
+        }
+
+        .india {
+            color: black;
+            font-weight: bolder;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="mainhead">
+            <div class="logo">
+                <a href="index.html" id="Rock">
+                    <p href="index.html" class="Rock">Rockmart</p>
+                </a>
+                <a href="subscription.html" id="Extra">
+                    <p href="subscription.html" class="Extra">Extra Plus +</p>
+                </a>
+            </div>
+            <div class="search">
+                <select name="cars" id="cars">
+                    <option value="volvo">All</option>
+                    <option value="saab">Electronics</option>
+                    <option value="mercedes">Grocery</option>
+                    <option value="audi">Clothes</option>
+                </select>
+                <input type="text" placeholder="Search Your Product" class="searchproduct">
+                <button class="magnifing"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="login">
+                <a href="login.html" class="userlogo">Hi!</a>
+                <!-- <a href="login.html" class="loginbut"></a> -->
+            </div>
+            <div class="accsection">
+                <a href="acc.html" class="celender">
+                    <i class="fa-solid fa-clipboard-user"></i>
+                </a>
+                <a href="acc.html" class="accsection1">ACM Section</a>
+            </div>
+            <div class="location">
+                <a href="deleverlist.html" class="locationlogo"><i class="fa-solid fa-location-dot"></i></a>
+                <a href="deleverlist.html" class="Delever">Delever in India</a>
+            </div>
+            <div class="cart">
+                <a href="cart.html" class="cartlogo"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="cart.html" class="cartlist">Cart</a>
+            </div>
+            <div class="order">
+                <a href="order.html" class="orderlogo"><i class="fa-solid fa-box"></i></a>
+                <a href="order.html" class="return">Returns & Order</a>
+            </div>
+        </div>
+    </header>
+    <nav class="nav">
+        <p class="all"><i class="fa-solid fa-bars"></i><a href="index.html"
+                style="color: white; text-decoration: none;">All</p></a>
+        <a href="#" class="all">Electronics</a>
+        <a href="#" class="all">Grocery</a>
+        <a href="mobile.html" class="all">Mobiles</a>
+        <a href="macbook.html" class="all">Mac</a>
+        <a href="macbook.html" class="all">Apple</a>
+        <a href="mobile.html" class="all">Realme</a>
+        <a href="minimemdeal.html" class="all">Today Deal's</a>
+        <a href="blockbusterdeal.html" class="all">Best Deal</a>
+        <a href="macbook.html" class="all">New Relesed</a>
+        <a href="#" class="all">Faishon</a>
+        <a href="#" class="all">Clothes</a>
+        <a href="homeandkitchen.html" class="all">Home & Kitchen</a>
+        <a href="#" class="all">Prime</a>
+        <a href="#" class="all">Music</a>
+        <a href="#" class="all">Vedio</a>
+        <a href="#" class="all">Acount Sec.</a>
+        <a href="#" class="contact">Contact Us</a>
+    </nav>
+    <main>
+        <p class="india">Delivery in India</p>
+        <p class="sooncome">This List Will Come Very Soon</p>
+        <button class="gohome" onclick="gohome()">Go Home</button>
+    </main>
+
+    <script>
+        const gohome = () => {
+            window.location.href = 'indexprofile.html';
+        }
+
+        let searchtag = document.querySelector(".searchproduct"),
+            searchBut = document.querySelector(".magnifing");
+
+        searchBut.addEventListener("click", () => {
+            let tag = searchtag.value;
+            if (tag == 'mobile' || tag == 'MOBILE' || tag == 'molbile phone' || tag == 'mobile Phone' || tag == 'realme mobile' || tag == 'samsang mobile' || tag == 'samsang galaxy' || tag == 'motorola' || tag == 'redmi mobile' || tag == 'samsang' || tag == 'realme') {
+                window.location.href = 'mobile.html';
+            }
+            else if (tag == 'mac' || tag == 'macbook' || tag == 'mac m3' || tag == 'mac m1' || tag == 'mac m2' || tag == 'mac m4' || tag == 'mac 2024' || tag == 'apple 2024' || tag == 'MAC BOOK' || tag == 'MAC' || tag == 'MACBOOK' || tag == 'MAC') {
+                window.location.href = 'macbook.html';
+            }
+            else if (tag == 'neck band' || tag == 'traully' || tag == 'trolley' || tag == 'troley' || tag == 'agni 3' || tag == 'lava' || tag == 'tv' || tag == 'earbud' || tag == 'laptop' || tag == 'bed' || tag == 'watch' || tag == 'ro' || tag == 'Blockbuster' || tag == 'blockbuster deal') {
+                window.location.href = 'blockbusterdeal.html';
+            }
+            else if (tag == 'scotey' || tag == 'scoter' || tag == 'corck' || tag == 'morfo' || tag == 'cycle' || tag == 'electronic cycle' || tag == 'vacume clenar' || tag == 'cleaner' || tag == 'heater' || tag == 'induction' || tag == 'mixi' || tag == 'mixture' || tag == 'l1' || tag == '50% off' || tag == '50%') {
+                window.location.href = 'minimemdeal.html';
+            } else if (tag == 'kitchen' || tag == 'Kitchen product' || tag == 'bottel' || tag == 'tawa') {
+                window.location.href = 'homeandkitchen.html';
+            }
+            else {
+                alert("Plese enter Valid tag !")
+            }
+        });
+    </script>
+</body>
+
+</html>

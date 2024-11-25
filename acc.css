@@ -1,0 +1,455 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.accloginmain {
+    margin-top: 100px;
+}
+
+.accloginmain {
+    margin-left: 35%;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.accloginmain1 {
+    width: 500px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.idpass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.userid {
+    height: 35px;
+    width: 450px;
+    background-color: orange;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    margin-top: 5px;
+}
+
+.acclogin1par {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: red;
+    font-weight: bolder;
+}
+
+.useridtext {
+    text-align: left;
+    margin-left: 30px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.passwordaccuser {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 100%;
+    text-align: left;
+
+}
+
+.passworduseridacc {
+    height: 35px;
+    width: 450px;
+    background-color: orange;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    margin-top: 5px;
+}
+
+.submituseracc {
+    width: 450px;
+    height: 45px;
+    margin-top: 30px;
+    border: none;
+    background-color: blue;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    color: rgb(99, 247, 7);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.submituseracc:hover {
+    background-color: green;
+    color: red;
+}
+
+.plesecorrecrid {
+    width: 100%;
+    margin-left: 30px;
+    color: red;
+    font-weight: bolder;
+}
+
+.passwordacmlog {
+    width: 100%;
+    margin-left: 30px;
+    color: red;
+    font-weight: bolder;
+}
+
+.remenderme {
+    width: 100%;
+    margin-left: 30px;
+    margin-top: 10px;
+    color: green;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.remenderme:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.para1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer1 {
+    text-align: center;
+    align-items: end;
+    margin-bottom: 10px;
+}
+
+.enterName {
+    height: 35px;
+    width: 450px;
+    background-color: orange;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    margin-top: 5px;
+}
+
+.yourname1 {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 100%;
+    text-align: left;
+}
+
+.alertentername {
+    width: 100%;
+    margin-left: 30px;
+    color: red;
+    font-weight: bolder;
+}
+
+.motherdivofworker {
+    display: flex;
+}
+
+.leftheder {
+    width: 110px;
+    background-color: #132f57;
+    color: white;
+    height: 100vh;
+}
+
+.onedeshboard {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0px;
+    margin-top: 30px;
+    height: 55px;
+    border-bottom: 0.5px solid rgb(173, 171, 171);
+    cursor: pointer;
+}
+
+.onedeshboard p {
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.twogeneral {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0px;
+    padding-top: 30px;
+    height: 75px;
+    border-bottom: 0.5px solid rgb(173, 171, 171);
+    cursor: pointer;
+}
+
+.twogeneral {
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.logout {
+    color: white;
+    font-size: 1rem;
+    margin: 0px;
+    text-align: center;
+    padding-top: 30px;
+    height: 75px;
+    border-bottom: 0.5px solid rgb(173, 171, 171);
+    cursor: pointer;
+}
+
+.logout p {
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.attendencesheet {
+    background-color: rgb(228, 223, 223);
+}
+
+.uperheader {
+    background-color: white;
+    height: 80px;
+    width: 1599px;
+    justify-content: space-evenly;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.rockmartlogo11 {
+    font-family: "Londrina Sketch", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    color: rgb(140, 102, 4);
+    height: 35px;
+    margin-right: 250px;
+}
+
+.Emplaoyrollno {
+    font-size: 1rem;
+    width: 120px;
+    padding-left: 328px;
+}
+
+.EmplaoyIdNo {
+    font-size: 1rem;
+    width: 150px;
+    padding-left: 20px;
+    border-right: 1px solid black;
+}
+
+.post {
+    font-size: 1rem;
+    padding-left: 20px;
+}
+
+.bell {
+    font-size: 2rem;
+    padding-left: 30px;
+    padding-right: 20px;
+    color: orange;
+}
+
+.nameofEmployInSheet {
+    font-size: 1rem;
+    padding-left: 20px;
+    color: rgb(187, 184, 184);
+}
+
+.userIcon {
+    font-size: 1.5rem;
+    color: red;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.attendence {
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    margin-top: 40px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.attendence1 {
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid red;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.startcam {
+    margin: 0px;
+    padding: 0px;
+    height: 40px;
+    width: 150px;
+    margin-left: 100px;
+    background-color: orangered;
+    color: yellow;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+.clickphoto {
+    margin: 0px;
+    padding: 0px;
+    height: 40px;
+    width: 100px;
+    margin-left: 20px;
+    background-color: orangered;
+    color: yellow;
+    font-size: 1rem;
+    border: 1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cameraopen {
+    margin-left: 100px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.afterphoto {
+    margin-left: 100px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.uploadphoto {
+    margin: 0px;
+    padding: 0px;
+    height: 40px;
+    width: 100px;
+    margin-left: 20px;
+    background-color: orangered;
+    color: yellow;
+    font-size: 1rem;
+    border: 1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.presenddiv {
+    height: 50px;
+    width: 150px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.downdivmid {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box1 {
+    height: 550px;
+    width: 400px;
+    background-color: white;
+    margin-top: 100px;
+    border-radius: 10px;
+    border-left: 3px solid black;
+    box-shadow: 2px 20px 20px black;
+}
+
+.box2 {
+    height: 550px;
+    width: 400px;
+    background-color: white;
+    margin-top: 100px;
+    border-radius: 10px;
+    border-left: 3px solid black;
+    box-shadow: 2px 20px 20px black;
+}
+
+.box3 {
+    height: 550px;
+    width: 400px;
+    background-color: white;
+    margin-top: 100px;
+    border-radius: 10px;
+    border-left: 3px solid black;
+    box-shadow: 2px 20px 20px black;
+}
+
+.feeinformation {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-top: 10px;
+    height: 50px;
+    border-bottom: 3px solid rgb(78, 77, 77);
+}
+
+.box1p {
+    color:  blue;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.box1p:hover {
+    text-decoration: underline;
+    color: orange;
+}
+
+.rock {
+    margin: 0px;
+    padding: 0px;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    height: 35px;
+    text-decoration: none;
+    font-family: "Londrina Sketch", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.decorrock {
+    text-decoration: none;
+}
+
+.Extra {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.5rem;
+    color: rgb(255, 51, 0);
+    cursor: pointer;
+    font-weight: bolder;
+}

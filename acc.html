@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="acc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="accloginmain">
+            <div class="accloginmain1">
+                <div class="logo">
+                    <a href="index.html" class="decorrock">
+                    <p class="rock">Rockmart</p>
+                    <p class="Extra">Extra Plus+</p>
+                    </a>
+                </div>
+                <div class="idpass">
+                    <p class="acclogin1par">ACC Login Only For Employ</p>
+                    <p class="useridtext">User ID</p>
+                    <input type="email" class="userid" placeholder="Enter Your User ID">
+                    <p class="plesecorrecrid"></p>
+                    <p class="passwordaccuser">Password</p>
+                    <input type="password" class="passworduseridacc" placeholder="Enter Your Correct Password">
+                    <p class="passwordacmlog"></p>
+                    <p class="yourname1">Your Name</p>
+                    <input type="text" placeholder="Enter Your Name" class="enterName">
+                    <p class="alertentername"></p>
+                    <button class="submituseracc" onclick="login()">Log In</button>
+                    <p class="remenderme">Forget Your Password</p>
+                    <div class="para1">
+                        <p>Rock Mart Extra Plus of cardiology Employee ?</p>
+                    </div>
+                    <p class="footer1">
+                        © 2024 acc.org. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="attendencesheet" hidden>
+            <div class="motherdivofworker">
+                <div class="leftheder">
+                    <div class="onedeshboard">
+                        <i class="fa-solid fa-gauge"></i>
+                        <p>Dashboard</p>
+                    </div>
+                    <div class="twogeneral">
+                        <i class="fa-solid fa-bars"></i>
+                        <p>General Information</p>
+                    </div>
+                    <div class="logout">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <p>LogOut</p>
+                    </div>
+                </div>
+                <div class="mainheader">
+                    <div class="uperheader">
+                        <p class="rockmartlogo11">
+                            <i class="fa-solid fa-house"></i>
+                            Rockmart
+                        </p>
+                        <p class="Emplaoyrollno">Employe Roll No 141</p>
+                        <p class="EmplaoyIdNo">Emplaoy Id No 1254154251415</p>
+                        <div class="post">
+                            <p>Post</p>
+                            <p>Branch-Manager-1254154251415-141-813222</p>
+                        </div>
+                        <p class="bell"><i class="fa-solid fa-bell"></i></p>
+                        <p class="nameofEmployInSheet"></p>
+                        <p class="userIcon"><i class="fa-solid fa-user"></i></p>
+                    </div>
+                    <div class="lowerheader">
+                        <div class="hidetoday" hidden>
+                            <div class="presenddiv" hidden>
+                                <p style="color: black;">Today = <p style="color: red; margin-left: 5px;">Present</p></p>
+                            </div>
+                        </div>
+                        <div class="attendence">
+                            <button class="attendence1" onclick="takeatten()">Attendence</button>
+                        </div>
+                        <div class="taskasist" hidden>
+                            <button id="start-camera" class="startcam" onclick="starttakephoto()">Start Camera</button>
+                            <video id="video" width="320" height="240" autoplay class="cameraopen" hidden></video>
+                            <button id="click-photo" class="clickphoto" hidden onclick="uplodimgatten()">Click Photo</button>
+                            <canvas id="canvas" width="320" height="240" class="afterphoto"></canvas>
+                            <button class="uploadphoto" hidden onclick="uploadimgattend()">Upload</button>
+                        </div>
+                        <div class="motherdowndivmid" hidden>
+                        <div class="downdivmid">
+                            <div class="box1">
+                                <p class="feeinformation">Fee Information</p>
+                                <p class="box1p">This Month Payment</p>
+                                <p class="box1p">Prev Month Payment</p>
+                                <p class="box1p">Payment Recipt Print</p>
+                                <p class="box1p">Pyment Instalment Chart</p>
+                                <p class="box1p">Other Payment Chart</p>
+                                <p class="box1p">Bounty Chart</p>
+                                <p class="box1p">Bounes Payment Chart</p>
+                            </div>
+                            <div class="box2">
+                                <p class="feeinformation">General Information</p>
+                                <p class="box1p">Your Profile</p>
+                                <p class="box1p">News and Notice</p>
+                                <p class="box1p">Today Rutine</p>
+                                <p class="box1p">Mounthly Chart</p>
+                                <p class="box1p">Project Detail</p>
+                                <p class="box1p">Contact Detail</p>
+                                <p class="box1p">ABCID Verification</p>
+                                <p class="box1p">Online Form Approval</p>
+                                <p class="box1p">Working Matarial</p>
+                            </div>
+                            <div class="box3">
+                                <p class="feeinformation">Academic</p>
+                                <p class="box1p">Company Meating Report</p>
+                                <p class="box1p">Online Meating Recording</p>
+                                <p class="box1p">Time Table</p>
+                                <p class="box1p">Mounthaly Report</p>
+                                <p class="box1p">Current Backlock</p>
+                                <p class="box1p">Attendance Status</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let userinput = document.querySelector(".userid"),
+            passinput = document.querySelector(".passworduseridacc"),
+            inputwarning = document.querySelector(".plesecorrecrid"),
+            inputpasswarning = document.querySelector(".passwordacmlog"),
+            accloginmain = document.querySelector(".accloginmain"),
+            attendencesheet = document.querySelector(".attendencesheet"),
+            alertentername = document.querySelector(".alertentername"),
+            nameofEmployInSheet = document.querySelector(".nameofEmployInSheet"),
+            enterName = document.querySelector(".enterName");
+
+        login = () => {
+            let valofuser = userinput.value;
+            valofpass = passinput.value;
+            enterNameval = enterName.value;
+            if (valofuser == "" && valofpass == "" && enterNameval == '') {
+                inputwarning.innerText = "Plese enter User Id";
+                inputpasswarning.innerText = "Plese enter Password";
+                alertentername.innerText = "Plese enter You Correct Name";
+            } else if (valofuser == "" && valofpass == "") {
+                inputwarning.innerText = "Plese enter User Id";
+                inputpasswarning.innerText = "Plese enter Password";
+            } else if (valofpass == "" && enterNameval == '') {
+                inputpasswarning.innerText = "Plese enter Password";
+                alertentername.innerText = "Plese enter You Correct Name";
+            } else if (valofuser == "" && enterNameval == '') {
+                inputwarning.innerText = "Plese enter User Id";
+                alertentername.innerText = "Plese enter You Correct Name";
+            } else if (valofuser == "") {
+                inputwarning.innerText = "Plese enter User Id";
+            } else if (valofpass == "") {
+                inputpasswarning.innerText = "Plese enter Password";
+            } else if (enterNameval == '') {
+                alertentername.innerText = "Plese enter You Correct Name";
+            }else if (valofuser == "7766930672" && valofpass == "Sumit@12345" && enterNameval == "Sumit Kumar") {
+                accloginmain.hidden = true;
+                attendencesheet.hidden = false;
+                nameofEmployInSheet.innerText = enterNameval;
+            }else {
+                alert("Plese enter Correct Detail");
+            }
+        }
+
+        let camera_button = document.querySelector("#start-camera");
+        let video = document.querySelector("#video");
+        let click_button = document.querySelector("#click-photo");
+        let canvas = document.querySelector("#canvas");
+
+        camera_button.addEventListener('click', async function () {
+            let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+            video.srcObject = stream;
+        });
+
+        click_button.addEventListener('click', function () {
+            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+            let image_data_url = canvas.toDataURL('image/jpeg');
+            console.log(image_data_url);
+    
+        });
+
+        attendence = document.querySelector(".attendence"),
+        taskasist = document.querySelector(".taskasist");
+
+        takeatten = () => {
+            attendence.hidden = true;
+            taskasist.hidden = false;
+        }
+
+        startcam = document.querySelector(".startcam"),
+        cameraopen = document.querySelector(".cameraopen"),
+        clickphoto = document.querySelector(".clickphoto"),
+        hidetoday = document.querySelector(".hidetoday"),
+        uploadphoto = document.querySelector(".uploadphoto"),
+        cameraopen = document.querySelector(".cameraopen"),
+        logout = document.querySelector(".logout"),
+        motherdowndivmid = document.querySelector(".motherdowndivmid");
+
+        logout.addEventListener("click", () => {
+            attendencesheet.hidden = true;
+            accloginmain.hidden = false;
+        })
+
+        starttakephoto = () => {
+            startcam.hidden = true;
+            startcam.disable = true;
+            cameraopen.hidden = false;
+            clickphoto.hidden = false;
+        }
+
+        uplodimgatten = () => {
+            uploadphoto.hidden = false;
+        }
+
+        uploadimgattend = () => {
+            alert("Your Attendence is Recorded sucessfully");
+            taskasist.hidden = true;
+            taskasist.disable = true;
+            hidetoday.hidden = false;
+            motherdowndivmid.hidden = false;
+        };
+
+        let box1 = document.querySelector(".box1");
+        let box2 = document.querySelector(".box2");
+        let box3 = document.querySelector(".box3");
+
+        box1.addEventListener("click", () => {
+            alert("This Feature Will Comming Soon.....");
+        });
+
+        box2.addEventListener("click", () => {
+            alert("This Feature Will Comming Soon.....");
+        });
+
+        box3.addEventListener("click", () => {
+            alert("This Feature Will Comming Soon.....");
+        });
+
+    </script>
+
+</body>
+
+</html>
