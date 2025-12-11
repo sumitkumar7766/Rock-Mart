@@ -10,7 +10,8 @@ Welcome to Rock Mart, your one-stop shop for all things rock music! Whether you'
 
 ## Getting Started
 To get started with Rock Mart, simply clone this repository to your local machine:
-```git clone https://github.com/yourusername/rock-mart.git
+```
+git clone https://github.com/sumitkumar7766/Rock-Mart.git
 ```
 Then, open the `index.html` file in your web browser to explore the shop.
 
