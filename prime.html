@@ -1,0 +1,2954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Extra Plus | Rock Mart</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", Arial, sans-serif;
+            background: #f4f6f8;
+            color: #172033;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           TOP BAR
+        ===================================================== */
+
+        .top-bar {
+
+            min-height: 34px;
+
+            background: #111827;
+
+            color: white;
+
+            padding: 7px 5%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            font-size: 11px;
+        }
+
+        .top-left,
+        .top-right {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .header {
+
+            background: white;
+
+            padding: 14px 5%;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+
+            border-bottom: 1px solid #e5e7eb;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+        .logo {
+
+            min-width: 150px;
+        }
+
+        .logo h1 {
+
+            font-size: 27px;
+
+            font-weight: 900;
+
+            letter-spacing: -1.5px;
+        }
+
+        .logo h1 span {
+            color: #ff6b35;
+        }
+
+        .logo small {
+
+            display: block;
+
+            color: #7b8491;
+
+            font-size: 8px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* =====================================================
+           SEARCH
+        ===================================================== */
+
+        .search-box {
+
+            flex: 1;
+
+            height: 44px;
+
+            display: flex;
+
+            border: 1px solid #d8dce2;
+
+            border-radius: 7px;
+
+            overflow: hidden;
+        }
+
+        .search-box select {
+
+            width: 100px;
+
+            border: none;
+
+            outline: none;
+
+            background: #f8f9fa;
+
+            border-right: 1px solid #ddd;
+
+            padding: 0 8px;
+
+            font-size: 11px;
+        }
+
+        .search-box input {
+
+            flex: 1;
+
+            border: none;
+
+            outline: none;
+
+            padding: 0 15px;
+
+            font-size: 12px;
+        }
+
+        .search-button {
+
+            width: 52px;
+
+            border: none;
+
+            background: #ff6b35;
+
+            color: white;
+        }
+
+        .search-button:hover {
+            background: #e95724;
+        }
+
+
+        /* =====================================================
+           HEADER ACTIONS
+        ===================================================== */
+
+        .header-actions {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .header-action {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            white-space: nowrap;
+        }
+
+        .header-action i {
+            font-size: 19px;
+        }
+
+        .cart {
+
+            position: relative;
+
+            cursor: pointer;
+        }
+
+        .cart-count {
+
+            position: absolute;
+
+            top: -9px;
+
+            left: 13px;
+
+            width: 17px;
+
+            height: 17px;
+
+            border-radius: 50%;
+
+            background: #ff6b35;
+
+            color: white;
+
+            font-size: 8px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .navbar {
+
+            background: #172033;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 0 5%;
+
+            gap: 3px;
+
+            overflow-x: auto;
+
+            white-space: nowrap;
+        }
+
+        .navbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-link {
+
+            padding: 12px 15px;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            transition: 0.2s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+
+            background: #ff6b35;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            width: 94%;
+
+            max-width: 1500px;
+
+            min-height: 450px;
+
+            margin: 22px auto;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 50px 7%;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(12,17,30,.97),
+                    rgba(12,17,30,.82),
+                    rgba(12,17,30,.25)
+                ),
+
+                url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1800&q=85")
+                center / cover;
+        }
+
+
+        .hero-content {
+
+            max-width: 650px;
+
+            color: white;
+        }
+
+
+        .premium-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            padding: 7px 13px;
+
+            background: rgba(255,107,53,.18);
+
+            border: 1px solid rgba(255,107,53,.6);
+
+            color: #ff9a76;
+
+            border-radius: 20px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+        }
+
+
+        .hero h2 {
+
+            font-size: clamp(40px, 5vw, 66px);
+
+            line-height: 1;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 17px;
+        }
+
+
+        .hero h2 span {
+            color: #ff6b35;
+        }
+
+
+        .hero p {
+
+            max-width: 550px;
+
+            color: #dce2eb;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .primary-btn,
+        .secondary-btn {
+
+            border: none;
+
+            padding: 13px 22px;
+
+            border-radius: 7px;
+
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+
+        .primary-btn {
+
+            background: #ff6b35;
+
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: #e95724;
+        }
+
+
+        .secondary-btn {
+
+            background: white;
+
+            color: #172033;
+        }
+
+
+        /* =====================================================
+           STATS
+        ===================================================== */
+
+        .hero-stats {
+
+            display: flex;
+
+            gap: 30px;
+
+            margin-top: 30px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .stat strong {
+
+            display: block;
+
+            font-size: 20px;
+        }
+
+        .stat span {
+
+            color: #aeb7c5;
+
+            font-size: 9px;
+        }
+
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        .section {
+
+            width: 94%;
+
+            max-width: 1500px;
+
+            margin: 25px auto;
+
+            padding: 28px;
+
+            background: white;
+
+            border-radius: 12px;
+        }
+
+
+        .section-heading {
+
+            text-align: center;
+
+            margin-bottom: 28px;
+        }
+
+
+        .section-heading h2 {
+
+            font-size: 27px;
+
+            letter-spacing: -1px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .section-heading p {
+
+            color: #7b8491;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           BENEFITS
+        ===================================================== */
+
+        .benefits {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .benefit {
+
+            padding: 25px 20px;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            transition: .3s;
+        }
+
+
+        .benefit:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,.08);
+        }
+
+
+        .benefit-icon {
+
+            width: 55px;
+
+            height: 55px;
+
+            margin: 0 auto 15px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #fff0ea;
+
+            color: #ff6b35;
+
+            font-size: 21px;
+        }
+
+
+        .benefit h3 {
+
+            font-size: 14px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .benefit p {
+
+            color: #7b8491;
+
+            font-size: 10px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           PLANS
+        ===================================================== */
+
+        .plans {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+
+        .plan {
+
+            border: 1px solid #dfe3e8;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            transition: .3s;
+        }
+
+
+        .plan:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,.10);
+        }
+
+
+        .plan.popular {
+
+            border: 2px solid #ff6b35;
+
+            transform: scale(1.02);
+        }
+
+
+        .popular-label {
+
+            background: #ff6b35;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 7px;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+
+        .plan-content {
+
+            padding: 28px 24px;
+        }
+
+
+        .plan-icon {
+
+            width: 45px;
+
+            height: 45px;
+
+            border-radius: 8px;
+
+            background: #172033;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-bottom: 15px;
+        }
+
+
+        .plan h3 {
+
+            font-size: 18px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .plan-description {
+
+            color: #7b8491;
+
+            font-size: 10px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .price {
+
+            display: flex;
+
+            align-items: baseline;
+
+            gap: 4px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .price strong {
+
+            font-size: 32px;
+        }
+
+
+        .price span {
+
+            color: #7b8491;
+
+            font-size: 10px;
+        }
+
+
+        .old-price {
+
+            color: #9ca3af;
+
+            text-decoration: line-through;
+
+            font-size: 11px;
+
+            margin-left: 7px;
+        }
+
+
+        .plan-list {
+
+            list-style: none;
+
+            margin-bottom: 25px;
+        }
+
+
+        .plan-list li {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            font-size: 10px;
+
+            margin-bottom: 12px;
+
+            color: #46505e;
+        }
+
+
+        .plan-list i {
+
+            color: #0f8a4b;
+
+            font-size: 11px;
+        }
+
+
+        .plan-button {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border-radius: 6px;
+
+            border: 1px solid #172033;
+
+            background: white;
+
+            color: #172033;
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+
+        .plan-button:hover {
+
+            background: #172033;
+
+            color: white;
+        }
+
+
+        .popular .plan-button {
+
+            background: #ff6b35;
+
+            border-color: #ff6b35;
+
+            color: white;
+        }
+
+
+        .popular .plan-button:hover {
+
+            background: #e95724;
+        }
+
+
+        /* =====================================================
+           COMPARISON
+        ===================================================== */
+
+        .comparison-wrapper {
+
+            overflow-x: auto;
+        }
+
+
+        .comparison {
+
+            width: 100%;
+
+            min-width: 650px;
+
+            border-collapse: collapse;
+
+            font-size: 11px;
+        }
+
+
+        .comparison th,
+        .comparison td {
+
+            padding: 15px;
+
+            text-align: center;
+
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+
+        .comparison th:first-child,
+        .comparison td:first-child {
+
+            text-align: left;
+
+            font-weight: 600;
+        }
+
+
+        .comparison th {
+
+            background: #f7f8fa;
+
+            font-size: 12px;
+        }
+
+
+        .check {
+
+            color: #0f8a4b;
+
+            font-size: 14px;
+        }
+
+
+        .cross {
+
+            color: #c5c9cf;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           EXTRA PLUS BANNER
+        ===================================================== */
+
+        .premium-banner {
+
+            width: 94%;
+
+            max-width: 1500px;
+
+            min-height: 230px;
+
+            margin: 30px auto;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 30px 7%;
+
+            color: white;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(16,24,39,.96),
+                    rgba(16,24,39,.72)
+                ),
+
+                url("https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1600&q=80")
+                center / cover;
+        }
+
+
+        .premium-banner-content {
+            max-width: 650px;
+        }
+
+
+        .premium-banner h2 {
+
+            font-size: 30px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .premium-banner p {
+
+            color: #c9d0db;
+
+            font-size: 11px;
+
+            line-height: 1.6;
+
+            margin-bottom: 18px;
+        }
+
+
+        .premium-button {
+
+            border: none;
+
+            padding: 11px 20px;
+
+            background: #ff6b35;
+
+            color: white;
+
+            border-radius: 6px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           FAQ
+        ===================================================== */
+
+        .faq {
+
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+
+        .faq-item {
+
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+
+        .faq-question {
+
+            width: 100%;
+
+            padding: 18px 5px;
+
+            background: transparent;
+
+            border: none;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            text-align: left;
+
+            color: #172033;
+        }
+
+
+        .faq-question i {
+
+            transition: .3s;
+        }
+
+
+        .faq-answer {
+
+            max-height: 0;
+
+            overflow: hidden;
+
+            transition: .3s;
+        }
+
+
+        .faq-answer p {
+
+            color: #737c89;
+
+            font-size: 10px;
+
+            line-height: 1.7;
+
+            padding: 0 5px 18px;
+        }
+
+
+        .faq-item.open .faq-answer {
+            max-height: 150px;
+        }
+
+
+        .faq-item.open .faq-question i {
+
+            transform: rotate(180deg);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            margin-top: 40px;
+
+            background: #101827;
+
+            color: white;
+        }
+
+
+        .footer-main {
+
+            width: 90%;
+
+            max-width: 1400px;
+
+            margin: auto;
+
+            padding: 45px 0;
+
+            display: grid;
+
+            grid-template-columns:
+                2fr repeat(3, 1fr);
+
+            gap: 40px;
+        }
+
+
+        .footer-brand h2 {
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .footer-brand span {
+            color: #ff6b35;
+        }
+
+
+        .footer-brand p {
+
+            color: #aab2c0;
+
+            max-width: 330px;
+
+            font-size: 10px;
+
+            line-height: 1.7;
+        }
+
+
+        .footer-column h3 {
+
+            font-size: 12px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .footer-column a {
+
+            display: block;
+
+            color: #aab2c0;
+
+            font-size: 10px;
+
+            margin-bottom: 9px;
+        }
+
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+
+        .footer-bottom {
+
+            border-top: 1px solid #273142;
+
+            padding: 17px 5%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-size: 9px;
+
+            color: #8993a3;
+        }
+
+
+        /* =====================================================
+           TOAST
+        ===================================================== */
+
+        .toast {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            background: #172033;
+
+            color: white;
+
+            padding: 13px 18px;
+
+            border-radius: 7px;
+
+            font-size: 10px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.2);
+
+            transform: translateY(100px);
+
+            opacity: 0;
+
+            transition: .3s;
+
+            z-index: 5000;
+        }
+
+
+        .toast.show {
+
+            transform: translateY(0);
+
+            opacity: 1;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width:1100px) {
+
+            .benefits {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .plans {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .header-action span {
+                display: none;
+            }
+
+        }
+
+
+        @media(max-width:850px) {
+
+            .header {
+
+                flex-wrap: wrap;
+            }
+
+            .search-box {
+
+                order: 3;
+
+                flex-basis: 100%;
+            }
+
+            .plans {
+
+                grid-template-columns: 1fr;
+
+                max-width: 500px;
+            }
+
+            .plan.popular {
+
+                transform: none;
+            }
+
+            .footer-main {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+        }
+
+
+        @media(max-width:600px) {
+
+            .top-bar {
+                display: none;
+            }
+
+            .header {
+
+                padding: 12px 4%;
+
+                gap: 12px;
+            }
+
+            .logo {
+
+                min-width: auto;
+            }
+
+            .logo h1 {
+
+                font-size: 22px;
+            }
+
+            .logo small {
+                display: none;
+            }
+
+            .header-actions {
+
+                margin-left: auto;
+
+                gap: 12px;
+            }
+
+            .navbar {
+
+                padding: 0 3%;
+            }
+
+            .nav-link {
+
+                padding: 11px;
+
+                font-size: 9px;
+            }
+
+            .hero {
+
+                width: 100%;
+
+                margin: 0;
+
+                border-radius: 0;
+
+                min-height: 450px;
+
+                padding: 35px 7%;
+            }
+
+            .hero h2 {
+
+                font-size: 43px;
+            }
+
+            .hero p {
+
+                font-size: 12px;
+            }
+
+            .hero-stats {
+
+                gap: 20px;
+            }
+
+            .section {
+
+                width: 100%;
+
+                border-radius: 0;
+
+                padding: 22px 15px;
+            }
+
+            .benefits {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .premium-banner {
+
+                width: 100%;
+
+                border-radius: 0;
+
+                padding: 30px 7%;
+            }
+
+            .footer-main {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap: 25px;
+            }
+
+            .footer-brand {
+
+                grid-column: 1 / -1;
+            }
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                gap: 7px;
+
+                text-align: center;
+            }
+
+        }
+
+
+        @media(max-width:400px) {
+
+            .hero h2 {
+
+                font-size: 37px;
+            }
+
+            .benefit {
+
+                padding: 20px 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+<div class="top-bar">
+
+    <div class="top-left">
+
+        <span>
+            <i class="fa-solid fa-crown"></i>
+            Welcome to Rock Mart Extra Plus
+        </span>
+
+    </div>
+
+
+    <div class="top-right">
+
+        <span>Help</span>
+
+        <span>Track Order</span>
+
+        <span>Download App</span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+
+    <a
+        href="index.html"
+        class="logo"
+    >
+
+        <h1>
+            Rock<span>Mart</span>
+        </h1>
+
+        <small>
+            SHOP • SAVE • SMILE
+        </small>
+
+    </a>
+
+
+    <div class="search-box">
+
+        <select>
+
+            <option>All</option>
+
+            <option>Electronics</option>
+
+            <option>Fashion</option>
+
+            <option>Music</option>
+
+            <option>Home</option>
+
+        </select>
+
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Rock Mart..."
+        >
+
+
+        <button
+            class="search-button"
+            onclick="searchSite()"
+        >
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
+
+    </div>
+
+
+    <div class="header-actions">
+
+
+        <div class="header-action">
+
+            <i class="fa-regular fa-user"></i>
+
+            <span>Login</span>
+
+        </div>
+
+
+        <div class="header-action">
+
+            <i class="fa-regular fa-heart"></i>
+
+            <span>Wishlist</span>
+
+        </div>
+
+
+        <div
+            class="header-action cart"
+            onclick="openCart()"
+        >
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span
+                class="cart-count"
+                id="cartCount"
+            >
+                0
+            </span>
+
+            <span>Cart</span>
+
+        </div>
+
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar">
+
+
+    <a
+        href="index.html"
+        class="nav-link"
+    >
+        <i class="fa-solid fa-house"></i>
+        All
+    </a>
+
+
+    <a
+        href="mobile.html"
+        class="nav-link"
+    >
+        Mobiles
+    </a>
+
+
+    <a
+        href="macbook.html"
+        class="nav-link"
+    >
+        Mac
+    </a>
+
+
+    <a
+        href="minimemdeal.html"
+        class="nav-link"
+    >
+        Today's Deals
+    </a>
+
+
+    <a
+        href="blockbusterdeal.html"
+        class="nav-link"
+    >
+        Best Deals
+    </a>
+
+
+    <a
+        href="fashion.html"
+        class="nav-link"
+    >
+        Fashion
+    </a>
+
+
+    <a
+        href="clothes.html"
+        class="nav-link"
+    >
+        Clothes
+    </a>
+
+
+    <a
+        href="homeandkitchen.html"
+        class="nav-link"
+    >
+        Home & Kitchen
+    </a>
+
+
+    <a
+        href="music.html"
+        class="nav-link"
+    >
+        Music
+    </a>
+
+
+    <a
+        href="video.html"
+        class="nav-link"
+    >
+        Video
+    </a>
+
+
+    <a
+        href="subscription.html"
+        class="nav-link active"
+    >
+        Extra Plus
+    </a>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+
+        <div class="premium-badge">
+
+            <i class="fa-solid fa-crown"></i>
+
+            ROCK MART EXTRA PLUS
+
+        </div>
+
+
+        <h2>
+
+            Shop More.<br>
+
+            Save <span>More.</span>
+
+        </h2>
+
+
+        <p>
+
+            Unlock exclusive member benefits, special discounts,
+            faster delivery and premium deals designed to make
+            every Rock Mart purchase better.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+
+            <button
+                class="primary-btn"
+                onclick="scrollToPlans()"
+            >
+
+                Become a Member
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+            <button
+                class="secondary-btn"
+                onclick="scrollToBenefits()"
+            >
+
+                Explore Benefits
+
+            </button>
+
+
+        </div>
+
+
+        <div class="hero-stats">
+
+
+            <div class="stat">
+
+                <strong>
+                    10M+
+                </strong>
+
+                <span>
+                    Happy Shoppers
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    25%
+                </strong>
+
+                <span>
+                    Extra Savings
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    24/7
+                </strong>
+
+                <span>
+                    Member Support
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     BENEFITS
+========================================================= -->
+
+<section
+    class="section"
+    id="benefits"
+>
+
+
+    <div class="section-heading">
+
+        <h2>
+            Why Join Extra Plus?
+        </h2>
+
+        <p>
+            More benefits. More savings. More reasons to shop.
+        </p>
+
+    </div>
+
+
+    <div class="benefits">
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+
+                <i class="fa-solid fa-truck-fast"></i>
+
+            </div>
+
+            <h3>
+                Faster Delivery
+            </h3>
+
+            <p>
+                Get priority delivery on eligible orders
+                and spend less time waiting.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+
+                <i class="fa-solid fa-tags"></i>
+
+            </div>
+
+            <h3>
+                Exclusive Discounts
+            </h3>
+
+            <p>
+                Access member-only prices and special
+                discounts throughout the year.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </div>
+
+            <h3>
+                Early Access
+            </h3>
+
+            <p>
+                Get early access to selected sales,
+                launches and limited-time offers.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+
+                <i class="fa-solid fa-headset"></i>
+
+            </div>
+
+            <h3>
+                Priority Support
+            </h3>
+
+            <p>
+                Enjoy faster assistance whenever you
+                need help with your orders.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PLANS
+========================================================= -->
+
+<section
+    class="section"
+    id="plans"
+>
+
+
+    <div class="section-heading">
+
+        <h2>
+            Choose Your Plan
+        </h2>
+
+        <p>
+            Pick the membership that works best for you.
+        </p>
+
+    </div>
+
+
+    <div class="plans">
+
+
+        <!-- BASIC -->
+
+        <div class="plan">
+
+            <div class="plan-content">
+
+
+                <div class="plan-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <h3>
+                    Monthly
+                </h3>
+
+
+                <p class="plan-description">
+                    Perfect for occasional shoppers.
+                </p>
+
+
+                <div class="price">
+
+                    <strong>
+                        ₹99
+                    </strong>
+
+                    <span>
+                        /month
+                    </span>
+
+                </div>
+
+
+                <ul class="plan-list">
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Member-only deals
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Extra discounts
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Priority support
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Exclusive offers
+                    </li>
+
+                </ul>
+
+
+                <button
+                    class="plan-button"
+                    onclick="selectPlan('Monthly')"
+                >
+                    Choose Monthly
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- POPULAR -->
+
+        <div class="plan popular">
+
+
+            <div class="popular-label">
+
+                MOST POPULAR
+
+            </div>
+
+
+            <div class="plan-content">
+
+
+                <div class="plan-icon">
+
+                    <i class="fa-solid fa-crown"></i>
+
+                </div>
+
+
+                <h3>
+                    Annual
+                </h3>
+
+
+                <p class="plan-description">
+                    Best value for regular shoppers.
+                </p>
+
+
+                <div class="price">
+
+                    <strong>
+                        ₹799
+                    </strong>
+
+                    <span>
+                        /year
+                    </span>
+
+                    <span class="old-price">
+                        ₹1188
+                    </span>
+
+                </div>
+
+
+                <ul class="plan-list">
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Everything in Monthly
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Bigger annual savings
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Early sale access
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Priority delivery
+                    </li>
+
+                </ul>
+
+
+                <button
+                    class="plan-button"
+                    onclick="selectPlan('Annual')"
+                >
+                    Choose Annual
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- FAMILY -->
+
+        <div class="plan">
+
+
+            <div class="plan-content">
+
+
+                <div class="plan-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+
+                <h3>
+                    Family
+                </h3>
+
+
+                <p class="plan-description">
+                    Designed for families and groups.
+                </p>
+
+
+                <div class="price">
+
+                    <strong>
+                        ₹1299
+                    </strong>
+
+                    <span>
+                        /year
+                    </span>
+
+                </div>
+
+
+                <ul class="plan-list">
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Up to 5 members
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Member-only deals
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Priority support
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Exclusive family offers
+                    </li>
+
+                </ul>
+
+
+                <button
+                    class="plan-button"
+                    onclick="selectPlan('Family')"
+                >
+                    Choose Family
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     COMPARISON
+========================================================= -->
+
+<section class="section">
+
+
+    <div class="section-heading">
+
+        <h2>
+            Compare Memberships
+        </h2>
+
+        <p>
+            See what you get with each plan.
+        </p>
+
+    </div>
+
+
+    <div class="comparison-wrapper">
+
+
+        <table class="comparison">
+
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Benefits
+                    </th>
+
+                    <th>
+                        Free
+                    </th>
+
+                    <th>
+                        Monthly
+                    </th>
+
+                    <th>
+                        Annual
+                    </th>
+
+                    <th>
+                        Family
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+                <tr>
+
+                    <td>
+                        Member Discounts
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-xmark cross"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-check check"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-check check"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-check check"></i>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Exclusive Deals
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-xmark cross"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-check check"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-check check"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-check check"></i>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Priority Delivery
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-xmark cross"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-xmark cross"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-check check"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-check check"></i>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Early Sale Access
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-xmark cross"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-xmark cross"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-check check"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-check check"></i>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Priority Support
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-xmark cross"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-check check"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-check check"></i>
+                    </td>
+
+                    <td>
+                        <i class="fa-solid fa-check check"></i>
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PREMIUM BANNER
+========================================================= -->
+
+<section class="premium-banner">
+
+
+    <div class="premium-banner-content">
+
+
+        <h2>
+            Make Every Order Better.
+        </h2>
+
+
+        <p>
+            Join Rock Mart Extra Plus and unlock a smarter,
+            faster and more rewarding shopping experience.
+        </p>
+
+
+        <button
+            class="premium-button"
+            onclick="scrollToPlans()"
+        >
+
+            Join Extra Plus
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FAQ
+========================================================= -->
+
+<section class="section">
+
+
+    <div class="section-heading">
+
+        <h2>
+            Frequently Asked Questions
+        </h2>
+
+        <p>
+            Everything you need to know about Extra Plus.
+        </p>
+
+    </div>
+
+
+    <div class="faq">
+
+
+        <!-- FAQ 1 -->
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                What is Rock Mart Extra Plus?
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                <p>
+                    Extra Plus is Rock Mart's premium membership
+                    program that provides members with exclusive
+                    deals, discounts, priority support and other
+                    shopping benefits.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 2 -->
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Can I cancel my membership?
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                <p>
+                    Yes. You can manage or cancel your membership
+                    according to the membership terms applicable
+                    to your selected plan.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 3 -->
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                How do member discounts work?
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                <p>
+                    Eligible Extra Plus members can see applicable
+                    member-only prices and offers on selected
+                    products during checkout or promotional periods.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 4 -->
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Is the annual plan better than monthly?
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                <p>
+                    If you shop regularly on Rock Mart, the annual
+                    plan can provide better overall value because
+                    you pay once for the full membership period.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 5 -->
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Can I use Extra Plus on mobile?
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                <p>
+                    Yes. The Extra Plus experience is designed to
+                    work across desktop, tablet and mobile screens.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+
+    <div class="footer-main">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                Rock<span>Mart</span>
+            </h2>
+
+
+            <p>
+                Your everyday marketplace for electronics,
+                fashion, music, home essentials and much more.
+                Extra Plus makes your shopping experience even better.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Explore
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="fashion.html">
+                Fashion
+            </a>
+
+            <a href="clothes.html">
+                Clothes
+            </a>
+
+            <a href="music.html">
+                Music
+            </a>
+
+            <a href="video.html">
+                Video
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Membership
+            </h3>
+
+            <a href="#benefits">
+                Benefits
+            </a>
+
+            <a href="#plans">
+                Plans
+            </a>
+
+            <a href="#plans">
+                Pricing
+            </a>
+
+            <a href="#">
+                Terms
+            </a>
+
+            <a href="#">
+                Privacy
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Support
+            </h3>
+
+            <a href="#">
+                Contact Us
+            </a>
+
+            <a href="#">
+                Track Order
+            </a>
+
+            <a href="#">
+                Returns
+            </a>
+
+            <a href="#">
+                Help Center
+            </a>
+
+            <a href="#">
+                FAQs
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Rock Mart. All Rights Reserved.
+        </span>
+
+        <span>
+            Extra Plus • Shop Smarter
+        </span>
+
+    </div>
+
+
+</footer>
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    class="toast"
+    id="toast"
+>
+    Welcome to Rock Mart!
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+    /* =====================================================
+       CART COUNT
+    ===================================================== */
+
+    let cart =
+        JSON.parse(localStorage.getItem("cart")) || [];
+
+
+    function updateCartCount() {
+
+        let count = 0;
+
+
+        cart.forEach(item => {
+
+            count += item.quantity || 1;
+
+        });
+
+
+        document.getElementById("cartCount")
+            .textContent = count;
+
+    }
+
+
+    updateCartCount();
+
+
+    /* =====================================================
+       PLAN SELECTION
+    ===================================================== */
+
+    function selectPlan(planName) {
+
+        showToast(
+            planName +
+            " plan selected!"
+        );
+
+
+        setTimeout(() => {
+
+            alert(
+                "You selected the " +
+                planName +
+                " Extra Plus plan."
+            );
+
+        }, 300);
+
+    }
+
+
+    /* =====================================================
+       SCROLL TO PLANS
+    ===================================================== */
+
+    function scrollToPlans() {
+
+        document
+            .getElementById("plans")
+            .scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+    }
+
+
+    /* =====================================================
+       SCROLL TO BENEFITS
+    ===================================================== */
+
+    function scrollToBenefits() {
+
+        document
+            .getElementById("benefits")
+            .scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+    }
+
+
+    /* =====================================================
+       SEARCH
+    ===================================================== */
+
+    function searchSite() {
+
+        const input =
+            document
+                .getElementById("searchInput")
+                .value
+                .trim();
+
+
+        if (input === "") {
+
+            showToast(
+                "Type something to search!"
+            );
+
+            return;
+
+        }
+
+
+        showToast(
+            "Searching for: " + input
+        );
+
+    }
+
+
+    document
+        .getElementById("searchInput")
+        .addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Enter") {
+
+                    searchSite();
+
+                }
+
+            }
+        );
+
+
+    /* =====================================================
+       CART
+    ===================================================== */
+
+    function openCart() {
+
+        if (cart.length === 0) {
+
+            showToast(
+                "Your cart is empty!"
+            );
+
+        } else {
+
+            showToast(
+                "You have " +
+                cart.length +
+                " product(s) in cart."
+            );
+
+        }
+
+    }
+
+
+    /* =====================================================
+       FAQ ACCORDION
+    ===================================================== */
+
+    const faqQuestions =
+        document.querySelectorAll(
+            ".faq-question"
+        );
+
+
+    faqQuestions.forEach(question => {
+
+        question.addEventListener(
+            "click",
+            function() {
+
+                const currentItem =
+                    this.parentElement;
+
+
+                document
+                    .querySelectorAll(".faq-item")
+                    .forEach(item => {
+
+                        if (
+                            item !== currentItem
+                        ) {
+
+                            item.classList
+                                .remove("open");
+
+                        }
+
+                    });
+
+
+                currentItem.classList.toggle(
+                    "open"
+                );
+
+            }
+        );
+
+    });
+
+
+    /* =====================================================
+       TOAST
+    ===================================================== */
+
+    function showToast(message) {
+
+        const toast =
+            document.getElementById("toast");
+
+
+        toast.textContent =
+            message;
+
+
+        toast.classList.add("show");
+
+
+        setTimeout(() => {
+
+            toast.classList.remove("show");
+
+        }, 2200);
+
+    }
+
+
+    /* =====================================================
+       PAGE LOAD
+    ===================================================== */
+
+    console.log(
+        "Rock Mart Extra Plus page loaded successfully!"
+    );
+
+
+</script>
+
+
+</body>
+
+</html>
