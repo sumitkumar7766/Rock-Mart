@@ -1,0 +1,2268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RockMart Video</title>
+
+    <style>
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #111;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .top-bar {
+            background: #131921;
+            color: white;
+            height: 35px;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            padding: 0 35px;
+            gap: 25px;
+
+            font-size: 13px;
+        }
+
+        .top-bar a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .main-header {
+            background: #232f3e;
+            color: white;
+
+            min-height: 70px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 10px 25px;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #ff9900;
+        }
+
+        .search-box {
+            flex: 1;
+
+            height: 42px;
+
+            display: flex;
+
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .search-category {
+            width: 75px;
+            border: none;
+
+            background: #e6e6e6;
+            color: #333;
+
+            padding: 0 8px;
+
+            border-radius: 5px 0 0 5px;
+        }
+
+        .search-input {
+            flex: 1;
+
+            border: none;
+            outline: none;
+
+            padding: 0 15px;
+
+            font-size: 15px;
+        }
+
+        .search-btn {
+            width: 55px;
+
+            border: none;
+
+            background: #ff9900;
+            color: #111;
+
+            font-size: 18px;
+
+            border-radius: 0 5px 5px 0;
+        }
+
+        .search-btn:hover {
+            background: #ffad33;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-item {
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .header-item strong {
+            display: block;
+            font-size: 14px;
+        }
+
+        .cart {
+            font-size: 24px;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .navbar {
+            background: #37475a;
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+
+            gap: 25px;
+
+            padding: 11px 25px;
+
+            overflow-x: auto;
+
+            white-space: nowrap;
+        }
+
+        .navbar a {
+            font-size: 14px;
+        }
+
+        .navbar a:hover {
+            color: #ff9900;
+        }
+
+        .navbar::-webkit-scrollbar {
+            height: 4px;
+        }
+
+
+        /* =========================
+           VIDEO HERO
+        ========================= */
+
+        .video-hero {
+            min-height: 450px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5, 8, 15, 0.97) 0%,
+                    rgba(5, 8, 15, 0.88) 40%,
+                    rgba(5, 8, 15, 0.35) 75%,
+                    rgba(5, 8, 15, 0.85) 100%
+                ),
+                linear-gradient(135deg, #111827, #4b5563);
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+
+            padding: 60px 7%;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+
+            background: #ff9900;
+            color: #111;
+
+            padding: 7px 14px;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            margin-bottom: 18px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            line-height: 1.1;
+
+            margin-bottom: 18px;
+        }
+
+        .hero-content h1 span {
+            color: #ff9900;
+        }
+
+        .hero-content p {
+            color: #ddd;
+
+            line-height: 1.7;
+
+            font-size: 16px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .watch-btn {
+            border: none;
+
+            background: #ff9900;
+            color: #111;
+
+            padding: 13px 25px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .watch-btn:hover {
+            background: #ffad33;
+        }
+
+        .explore-btn {
+            background: transparent;
+
+            border: 1px solid #fff;
+
+            color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+        }
+
+        .explore-btn:hover {
+            background: white;
+            color: #111;
+        }
+
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+            width: 92%;
+            max-width: 1450px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           CATEGORY SECTION
+        ========================= */
+
+        .categories-section {
+            padding: 35px 0;
+        }
+
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 20px;
+        }
+
+        .section-title h2 {
+            font-size: 25px;
+        }
+
+        .section-title a {
+            color: #007185;
+            font-size: 14px;
+        }
+
+        .section-title a:hover {
+            color: #c45500;
+            text-decoration: underline;
+        }
+
+        .category-row {
+            display: grid;
+
+            grid-template-columns:
+                repeat(6, 1fr);
+
+            gap: 15px;
+        }
+
+        .category-card {
+            background: white;
+
+            min-height: 130px;
+
+            border-radius: 8px;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            border: 1px solid #ddd;
+
+            transition: 0.25s;
+
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 8px 20px rgba(0,0,0,0.12);
+
+            border-color: #ff9900;
+        }
+
+        .category-icon {
+            width: 55px;
+            height: 55px;
+
+            border-radius: 50%;
+
+            background: #eef1f5;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 26px;
+
+            margin-bottom: 10px;
+        }
+
+        .category-card h3 {
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           FEATURED VIDEO
+        ========================= */
+
+        .featured-section {
+            background: white;
+
+            padding: 30px;
+
+            margin: 10px 0 35px;
+
+            border-radius: 10px;
+
+            border: 1px solid #ddd;
+        }
+
+        .featured-content {
+            display: grid;
+
+            grid-template-columns: 1.3fr 1fr;
+
+            gap: 30px;
+
+            align-items: center;
+        }
+
+        .video-preview {
+            height: 330px;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111827,
+                    #1f2937,
+                    #4b5563
+                );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-preview::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(255,153,0,0.3),
+                    transparent 45%
+                );
+        }
+
+        .play-circle {
+            width: 85px;
+            height: 85px;
+
+            background: #ff9900;
+
+            color: #111;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 35px;
+
+            padding-left: 5px;
+
+            position: relative;
+
+            transition: 0.2s;
+        }
+
+        .play-circle:hover {
+            transform: scale(1.1);
+        }
+
+        .duration {
+            position: absolute;
+
+            right: 15px;
+            bottom: 15px;
+
+            background: rgba(0,0,0,0.8);
+
+            color: white;
+
+            padding: 5px 8px;
+
+            border-radius: 4px;
+
+            font-size: 12px;
+        }
+
+        .featured-info .small-title {
+            color: #ff9900;
+
+            text-transform: uppercase;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 10px;
+        }
+
+        .featured-info h2 {
+            font-size: 32px;
+
+            margin-bottom: 15px;
+        }
+
+        .featured-info p {
+            color: #555;
+
+            line-height: 1.6;
+
+            margin-bottom: 18px;
+        }
+
+        .rating {
+            margin-bottom: 20px;
+
+            color: #ff9900;
+
+            font-size: 18px;
+        }
+
+        .watch-now {
+            background: #ff9900;
+
+            border: none;
+
+            padding: 12px 22px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           VIDEO ROW
+        ========================= */
+
+        .video-section {
+            margin-bottom: 40px;
+        }
+
+        .video-row {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 18px;
+        }
+
+        .video-card {
+            background: white;
+
+            border: 1px solid #ddd;
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+            transition: 0.25s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 7px 18px rgba(0,0,0,0.13);
+        }
+
+        .thumbnail {
+            height: 180px;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #1f2937,
+                    #6b7280
+                );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thumbnail.t1 {
+            background:
+                linear-gradient(135deg, #172554, #1d4ed8);
+        }
+
+        .thumbnail.t2 {
+            background:
+                linear-gradient(135deg, #431407, #ea580c);
+        }
+
+        .thumbnail.t3 {
+            background:
+                linear-gradient(135deg, #052e16, #16a34a);
+        }
+
+        .thumbnail.t4 {
+            background:
+                linear-gradient(135deg, #3b0764, #9333ea);
+        }
+
+        .thumbnail.t5 {
+            background:
+                linear-gradient(135deg, #450a0a, #dc2626);
+        }
+
+        .thumbnail.t6 {
+            background:
+                linear-gradient(135deg, #083344, #0891b2);
+        }
+
+        .thumbnail.t7 {
+            background:
+                linear-gradient(135deg, #422006, #ca8a04);
+        }
+
+        .thumbnail.t8 {
+            background:
+                linear-gradient(135deg, #172554, #6366f1);
+        }
+
+        .mini-play {
+            width: 50px;
+            height: 50px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.92);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 20px;
+
+            padding-left: 3px;
+
+            color: #111;
+        }
+
+        .video-duration {
+            position: absolute;
+
+            bottom: 8px;
+            right: 8px;
+
+            background: rgba(0,0,0,0.85);
+
+            color: white;
+
+            padding: 4px 7px;
+
+            border-radius: 4px;
+
+            font-size: 11px;
+        }
+
+        .video-info {
+            padding: 13px;
+        }
+
+        .video-info h3 {
+            font-size: 15px;
+
+            line-height: 1.35;
+
+            margin-bottom: 7px;
+        }
+
+        .video-info p {
+            color: #666;
+
+            font-size: 12px;
+
+            margin-bottom: 12px;
+        }
+
+        .card-bottom {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .watch-small {
+            border: none;
+
+            background: #ffd814;
+
+            padding: 7px 12px;
+
+            border-radius: 5px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+        .watch-small:hover {
+            background: #f7ca00;
+        }
+
+        .rating-small {
+            color: #ff9900;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           PREMIUM BANNER
+        ========================= */
+
+        .premium-banner {
+            margin: 45px 0;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #111827,
+                    #374151
+                );
+
+            color: white;
+
+            border-radius: 10px;
+
+            padding: 35px 45px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 30px;
+        }
+
+        .premium-banner h2 {
+            font-size: 29px;
+
+            margin-bottom: 10px;
+        }
+
+        .premium-banner p {
+            color: #ddd;
+
+            line-height: 1.5;
+        }
+
+        .premium-btn {
+            background: #ff9900;
+
+            border: none;
+
+            padding: 13px 25px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+
+            white-space: nowrap;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #131a22;
+
+            color: white;
+
+            margin-top: 50px;
+        }
+
+        .back-top {
+            background: #37475a;
+
+            text-align: center;
+
+            padding: 15px;
+
+            font-size: 14px;
+        }
+
+        .back-top:hover {
+            background: #485769;
+        }
+
+        .footer-main {
+            padding: 45px 7%;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 35px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 15px;
+
+            font-size: 16px;
+        }
+
+        .footer-column a {
+            display: block;
+
+            color: #ddd;
+
+            font-size: 13px;
+
+            margin-bottom: 10px;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #3a4553;
+
+            text-align: center;
+
+            padding: 22px;
+
+            color: #aaa;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           SEARCH MESSAGE
+        ========================= */
+
+        .message {
+            position: fixed;
+
+            bottom: 25px;
+            right: 25px;
+
+            background: #131921;
+
+            color: white;
+
+            padding: 14px 20px;
+
+            border-radius: 6px;
+
+            display: none;
+
+            z-index: 9999;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.25);
+        }
+
+        .message.show {
+            display: block;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            .video-row {
+                grid-template-columns:
+                    repeat(4, 1fr);
+            }
+
+            .category-row {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .header-links {
+                gap: 10px;
+            }
+        }
+
+
+        @media (max-width: 850px) {
+
+            .main-header {
+                flex-wrap: wrap;
+            }
+
+            .logo {
+                width: 100%;
+            }
+
+            .search-box {
+                order: 2;
+                width: 100%;
+                max-width: none;
+            }
+
+            .header-links {
+                order: 3;
+            }
+
+            .featured-content {
+                grid-template-columns: 1fr;
+            }
+
+            .video-row {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .premium-banner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-main {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 550px) {
+
+            .top-bar {
+                padding: 0 15px;
+                gap: 10px;
+            }
+
+            .main-header {
+                padding: 12px 15px;
+            }
+
+            .navbar {
+                padding: 11px 15px;
+                gap: 18px;
+            }
+
+            .video-hero {
+                padding: 45px 6%;
+                min-height: 420px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .category-row {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .video-row {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-section {
+                padding: 18px;
+            }
+
+            .video-preview {
+                height: 230px;
+            }
+
+            .featured-info h2 {
+                font-size: 25px;
+            }
+
+            .premium-banner {
+                padding: 25px;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+            }
+
+            .header-links {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <div class="top-bar">
+
+        <a href="subscription.html">
+            Extra Plus
+        </a>
+
+        <a href="#">
+            Customer Service
+        </a>
+
+        <a href="#">
+            Download App
+        </a>
+
+    </div>
+
+
+
+    <!-- =========================
+         MAIN HEADER
+    ========================== -->
+
+    <header class="main-header">
+
+        <a href="index.html" class="logo">
+            Rock<span>Mart</span>
+        </a>
+
+
+        <div class="search-box">
+
+            <select class="search-category">
+                <option>All</option>
+                <option>Movies</option>
+                <option>Shows</option>
+                <option>Music</option>
+                <option>Sports</option>
+                <option>Kids</option>
+            </select>
+
+            <input
+                type="text"
+                class="search-input"
+                id="searchInput"
+                placeholder="Search movies, shows and videos..."
+            >
+
+            <button
+                class="search-btn"
+                onclick="searchVideos()"
+            >
+                🔍
+            </button>
+
+        </div>
+
+
+        <div class="header-links">
+
+            <a href="#" class="header-item">
+                Hello, Sign in
+                <strong>Account</strong>
+            </a>
+
+            <a href="#" class="header-item">
+                Returns
+                <strong>& Orders</strong>
+            </a>
+
+            <a href="cart.html" class="header-item cart">
+                🛒
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+        <a href="index.html">☰ All</a>
+
+        <a href="mobile.html">Mobiles</a>
+
+        <a href="macbook.html">Mac</a>
+
+        <a href="minimemdeal.html">Today's Deals</a>
+
+        <a href="blockbusterdeal.html">Best Deals</a>
+
+        <a href="fashion.html">Fashion</a>
+
+        <a href="clothes.html">Clothes</a>
+
+        <a href="homeandkitchen.html">
+            Home & Kitchen
+        </a>
+
+        <a href="music.html">
+            Music
+        </a>
+
+        <a href="video.html">
+            Video
+        </a>
+
+        <a href="subscription.html">
+            Extra Plus
+        </a>
+
+        <a href="#">
+            Contact Us
+        </a>
+
+    </nav>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="video-hero">
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                ROCKMART VIDEO
+            </span>
+
+            <h1>
+                Watch What You
+                <span>Love.</span>
+            </h1>
+
+            <p>
+                Discover movies, web series, documentaries,
+                sports highlights and exclusive RockMart
+                video content — all in one place.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button
+                    class="watch-btn"
+                    onclick="watchVideo('Featured Video')"
+                >
+                    ▶ Watch Now
+                </button>
+
+                <button
+                    class="explore-btn"
+                    onclick="scrollToVideos()"
+                >
+                    Explore Videos
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CATEGORIES
+    ========================== -->
+
+    <section class="categories-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Explore Categories
+                </h2>
+
+                <a href="#">
+                    See all
+                </a>
+
+            </div>
+
+
+            <div class="category-row">
+
+                <div
+                    class="category-card"
+                    onclick="filterVideos('Movies')"
+                >
+
+                    <div class="category-icon">
+                        🎬
+                    </div>
+
+                    <h3>
+                        Movies
+                    </h3>
+
+                </div>
+
+
+                <div
+                    class="category-card"
+                    onclick="filterVideos('Web Series')"
+                >
+
+                    <div class="category-icon">
+                        📺
+                    </div>
+
+                    <h3>
+                        Web Series
+                    </h3>
+
+                </div>
+
+
+                <div
+                    class="category-card"
+                    onclick="filterVideos('Sports')"
+                >
+
+                    <div class="category-icon">
+                        🏏
+                    </div>
+
+                    <h3>
+                        Sports
+                    </h3>
+
+                </div>
+
+
+                <div
+                    class="category-card"
+                    onclick="filterVideos('Music')"
+                >
+
+                    <div class="category-icon">
+                        🎵
+                    </div>
+
+                    <h3>
+                        Music Videos
+                    </h3>
+
+                </div>
+
+
+                <div
+                    class="category-card"
+                    onclick="filterVideos('Kids')"
+                >
+
+                    <div class="category-icon">
+                        🧸
+                    </div>
+
+                    <h3>
+                        Kids
+                    </h3>
+
+                </div>
+
+
+                <div
+                    class="category-card"
+                    onclick="filterVideos('Documentary')"
+                >
+
+                    <div class="category-icon">
+                        🌍
+                    </div>
+
+                    <h3>
+                        Documentary
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FEATURED VIDEO
+    ========================== -->
+
+    <section class="container">
+
+        <div class="featured-section">
+
+            <div class="featured-content">
+
+
+                <div
+                    class="video-preview"
+                    onclick="watchVideo('RockMart Originals')"
+                >
+
+                    <div class="play-circle">
+                        ▶
+                    </div>
+
+                    <span class="duration">
+                        12:45
+                    </span>
+
+                </div>
+
+
+                <div class="featured-info">
+
+                    <div class="small-title">
+                        Featured This Week
+                    </div>
+
+                    <h2>
+                        RockMart Originals
+                    </h2>
+
+                    <p>
+                        Go behind the scenes and discover
+                        exciting stories, technology,
+                        entertainment and shopping trends
+                        with our exclusive RockMart Originals.
+                    </p>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <button
+                        class="watch-now"
+                        onclick="watchVideo('RockMart Originals')"
+                    >
+                        ▶ Watch Now
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         TRENDING VIDEOS
+    ========================== -->
+
+    <section
+        class="video-section"
+        id="videos"
+    >
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Trending Now
+                </h2>
+
+                <a href="#">
+                    See more
+                </a>
+
+            </div>
+
+
+            <div class="video-row">
+
+
+                <!-- CARD 1 -->
+
+                <div class="video-card">
+
+                    <div class="thumbnail t1">
+
+                        <div
+                            class="mini-play"
+                            onclick="watchVideo('The Future of Technology')"
+                        >
+                            ▶
+                        </div>
+
+                        <span class="video-duration">
+                            08:32
+                        </span>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            The Future of Technology
+                        </h3>
+
+                        <p>
+                            Technology • 1.2M views
+                        </p>
+
+                        <div class="card-bottom">
+
+                            <span class="rating-small">
+                                ★★★★★
+                            </span>
+
+                            <button
+                                class="watch-small"
+                                onclick="watchVideo('The Future of Technology')"
+                            >
+                                Watch
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CARD 2 -->
+
+                <div class="video-card">
+
+                    <div class="thumbnail t2">
+
+                        <div
+                            class="mini-play"
+                            onclick="watchVideo('Weekend Movie Picks')"
+                        >
+                            ▶
+                        </div>
+
+                        <span class="video-duration">
+                            10:18
+                        </span>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Weekend Movie Picks
+                        </h3>
+
+                        <p>
+                            Movies • 845K views
+                        </p>
+
+                        <div class="card-bottom">
+
+                            <span class="rating-small">
+                                ★★★★☆
+                            </span>
+
+                            <button
+                                class="watch-small"
+                                onclick="watchVideo('Weekend Movie Picks')"
+                            >
+                                Watch
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CARD 3 -->
+
+                <div class="video-card">
+
+                    <div class="thumbnail t3">
+
+                        <div
+                            class="mini-play"
+                            onclick="watchVideo('Top Sports Moments')"
+                        >
+                            ▶
+                        </div>
+
+                        <span class="video-duration">
+                            06:45
+                        </span>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Top Sports Moments
+                        </h3>
+
+                        <p>
+                            Sports • 2.1M views
+                        </p>
+
+                        <div class="card-bottom">
+
+                            <span class="rating-small">
+                                ★★★★★
+                            </span>
+
+                            <button
+                                class="watch-small"
+                                onclick="watchVideo('Top Sports Moments')"
+                            >
+                                Watch
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CARD 4 -->
+
+                <div class="video-card">
+
+                    <div class="thumbnail t4">
+
+                        <div
+                            class="mini-play"
+                            onclick="watchVideo('Best Web Series')"
+                        >
+                            ▶
+                        </div>
+
+                        <span class="video-duration">
+                            15:20
+                        </span>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Best Web Series to Watch
+                        </h3>
+
+                        <p>
+                            Web Series • 654K views
+                        </p>
+
+                        <div class="card-bottom">
+
+                            <span class="rating-small">
+                                ★★★★★
+                            </span>
+
+                            <button
+                                class="watch-small"
+                                onclick="watchVideo('Best Web Series')"
+                            >
+                                Watch
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CARD 5 -->
+
+                <div class="video-card">
+
+                    <div class="thumbnail t5">
+
+                        <div
+                            class="mini-play"
+                            onclick="watchVideo('Action Movie Trailer')"
+                        >
+                            ▶
+                        </div>
+
+                        <span class="video-duration">
+                            02:45
+                        </span>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Action Movie Trailer
+                        </h3>
+
+                        <p>
+                            Movies • 3.4M views
+                        </p>
+
+                        <div class="card-bottom">
+
+                            <span class="rating-small">
+                                ★★★★☆
+                            </span>
+
+                            <button
+                                class="watch-small"
+                                onclick="watchVideo('Action Movie Trailer')"
+                            >
+                                Watch
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         NEW RELEASES
+    ========================== -->
+
+    <section class="video-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    New Releases
+                </h2>
+
+                <a href="#">
+                    Explore all
+                </a>
+
+            </div>
+
+
+            <div class="video-row">
+
+
+                <div class="video-card">
+
+                    <div class="thumbnail t6">
+
+                        <div
+                            class="mini-play"
+                            onclick="watchVideo('Ocean Adventure')"
+                        >
+                            ▶
+                        </div>
+
+                        <span class="video-duration">
+                            21:10
+                        </span>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Ocean Adventure
+                        </h3>
+
+                        <p>
+                            Documentary • New
+                        </p>
+
+                        <div class="card-bottom">
+
+                            <span class="rating-small">
+                                ★★★★★
+                            </span>
+
+                            <button
+                                class="watch-small"
+                                onclick="watchVideo('Ocean Adventure')"
+                            >
+                                Watch
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="video-card">
+
+                    <div class="thumbnail t7">
+
+                        <div
+                            class="mini-play"
+                            onclick="watchVideo('Gaming Championship')"
+                        >
+                            ▶
+                        </div>
+
+                        <span class="video-duration">
+                            18:25
+                        </span>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Gaming Championship
+                        </h3>
+
+                        <p>
+                            Gaming • 924K views
+                        </p>
+
+                        <div class="card-bottom">
+
+                            <span class="rating-small">
+                                ★★★★★
+                            </span>
+
+                            <button
+                                class="watch-small"
+                                onclick="watchVideo('Gaming Championship')"
+                            >
+                                Watch
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="video-card">
+
+                    <div class="thumbnail t8">
+
+                        <div
+                            class="mini-play"
+                            onclick="watchVideo('Space & Beyond')"
+                        >
+                            ▶
+                        </div>
+
+                        <span class="video-duration">
+                            14:52
+                        </span>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Space & Beyond
+                        </h3>
+
+                        <p>
+                            Science • 1.5M views
+                        </p>
+
+                        <div class="card-bottom">
+
+                            <span class="rating-small">
+                                ★★★★★
+                            </span>
+
+                            <button
+                                class="watch-small"
+                                onclick="watchVideo('Space & Beyond')"
+                            >
+                                Watch
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="video-card">
+
+                    <div class="thumbnail t3">
+
+                        <div
+                            class="mini-play"
+                            onclick="watchVideo('Music Festival 2026')"
+                        >
+                            ▶
+                        </div>
+
+                        <span class="video-duration">
+                            25:40
+                        </span>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Music Festival 2026
+                        </h3>
+
+                        <p>
+                            Music • 780K views
+                        </p>
+
+                        <div class="card-bottom">
+
+                            <span class="rating-small">
+                                ★★★★☆
+                            </span>
+
+                            <button
+                                class="watch-small"
+                                onclick="watchVideo('Music Festival 2026')"
+                            >
+                                Watch
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="video-card">
+
+                    <div class="thumbnail t4">
+
+                        <div
+                            class="mini-play"
+                            onclick="watchVideo('Kids Fun Time')"
+                        >
+                            ▶
+                        </div>
+
+                        <span class="video-duration">
+                            09:35
+                        </span>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Kids Fun Time
+                        </h3>
+
+                        <p>
+                            Kids • 430K views
+                        </p>
+
+                        <div class="card-bottom">
+
+                            <span class="rating-small">
+                                ★★★★★
+                            </span>
+
+                            <button
+                                class="watch-small"
+                                onclick="watchVideo('Kids Fun Time')"
+                            >
+                                Watch
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PREMIUM BANNER
+    ========================== -->
+
+    <section class="container">
+
+        <div class="premium-banner">
+
+            <div>
+
+                <h2>
+                    Get More With Extra Plus
+                </h2>
+
+                <p>
+                    Enjoy premium entertainment,
+                    exclusive content and special
+                    RockMart benefits.
+                </p>
+
+            </div>
+
+            <button
+                class="premium-btn"
+                onclick="window.location.href='subscription.html'"
+            >
+                Join Extra Plus
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <a
+            href="#"
+            class="back-top"
+        >
+            Back to top
+        </a>
+
+
+        <div class="footer-main">
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Get to Know Us
+                </h3>
+
+                <a href="#">
+                    About RockMart
+                </a>
+
+                <a href="#">
+                    Careers
+                </a>
+
+                <a href="#">
+                    Press Releases
+                </a>
+
+                <a href="#">
+                    Contact Us
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Make Money With Us
+                </h3>
+
+                <a href="#">
+                    Sell on RockMart
+                </a>
+
+                <a href="#">
+                    Become an Affiliate
+                </a>
+
+                <a href="#">
+                    Advertise Your Products
+                </a>
+
+                <a href="#">
+                    Partner With Us
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Let Us Help You
+                </h3>
+
+                <a href="#">
+                    Your Account
+                </a>
+
+                <a href="#">
+                    Your Orders
+                </a>
+
+                <a href="#">
+                    Shipping
+                </a>
+
+                <a href="#">
+                    Returns
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Video
+                </h3>
+
+                <a href="#">
+                    Movies
+                </a>
+
+                <a href="#">
+                    Web Series
+                </a>
+
+                <a href="#">
+                    Sports
+                </a>
+
+                <a href="#">
+                    Music Videos
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 RockMart. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         MESSAGE
+    ========================== -->
+
+    <div
+        class="message"
+        id="message"
+    >
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================
+           SHOW MESSAGE
+        ========================== */
+
+        function showMessage(text) {
+
+            const message =
+                document.getElementById("message");
+
+            message.textContent = text;
+
+            message.classList.add("show");
+
+            setTimeout(function() {
+
+                message.classList.remove("show");
+
+            }, 2500);
+
+        }
+
+
+
+        /* =========================
+           SEARCH
+        ========================== */
+
+        function searchVideos() {
+
+            const input =
+                document.getElementById("searchInput");
+
+            const query =
+                input.value.trim();
+
+            if (query === "") {
+
+                showMessage(
+                    "Please enter something to search."
+                );
+
+                return;
+            }
+
+            showMessage(
+                "Searching for: " + query
+            );
+
+        }
+
+
+
+        /* =========================
+           ENTER KEY SEARCH
+        ========================== */
+
+        document
+            .getElementById("searchInput")
+            .addEventListener(
+                "keydown",
+                function(event) {
+
+                    if (event.key === "Enter") {
+
+                        searchVideos();
+
+                    }
+
+                }
+            );
+
+
+
+        /* =========================
+           WATCH VIDEO
+        ========================== */
+
+        function watchVideo(videoName) {
+
+            showMessage(
+                "Opening " + videoName + "..."
+            );
+
+            /*
+                Later you can replace this with:
+
+                window.location.href =
+                "watch.html";
+
+                or a real video URL.
+            */
+
+        }
+
+
+
+        /* =========================
+           FILTER VIDEOS
+        ========================== */
+
+        function filterVideos(category) {
+
+            showMessage(
+                category + " videos selected."
+            );
+
+            document
+                .getElementById("videos")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        }
+
+
+
+        /* =========================
+           SCROLL TO VIDEOS
+        ========================== */
+
+        function scrollToVideos() {
+
+            document
+                .getElementById("videos")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        }
+
+    </script>
+
+</body>
+</html>
