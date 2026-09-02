@@ -1,0 +1,1061 @@
+/* =========================================================
+   ROCK MART - FASHION PAGE
+   MARKETPLACE / E-COMMERCE DESIGN
+   ========================================================= */
+
+
+/* ================= RESET ================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f1f3f6;
+
+    color: #212121;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR ACTIVE STATE
+   ========================================================= */
+
+.active-nav {
+    font-weight: 700;
+
+    border-bottom: 3px solid #ffffff;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.fashion-hero {
+
+    width: 100%;
+
+    min-height: 360px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 50px 8%;
+
+    background-image:
+
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.78),
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.05)
+        ),
+
+        url(
+            "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85"
+        );
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.fashion-hero-content {
+
+    max-width: 570px;
+
+    color: white;
+}
+
+
+.fashion-tag {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.fashion-hero h1 {
+
+    margin: 0 0 16px;
+
+    font-size: clamp(42px, 6vw, 68px);
+
+    line-height: 1.02;
+
+    font-weight: 700;
+}
+
+
+.fashion-hero h1 span {
+
+    display: block;
+
+    color: #ffd814;
+}
+
+
+.fashion-hero-content > p {
+
+    max-width: 480px;
+
+    margin: 0 0 25px;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    color: #eeeeee;
+}
+
+
+/* Shop button */
+
+.fashion-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 24px;
+
+    background: #ffd814;
+
+    color: #111;
+
+    border-radius: 3px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+
+.fashion-btn:hover {
+
+    background: #ffca00;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+   ========================================================= */
+
+.fashion-section {
+
+    width: 94%;
+
+    max-width: 1450px;
+
+    margin: 18px auto;
+
+    padding: 22px;
+
+    background: white;
+}
+
+
+/* Section heading */
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+
+    padding-bottom: 13px;
+
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+.section-title h2 {
+
+    margin: 0;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    color: #212121;
+}
+
+
+.section-title a {
+
+    color: #2874f0;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.section-title a i {
+
+    margin-left: 4px;
+}
+
+
+/* =========================================================
+   CATEGORY ROW
+   ========================================================= */
+
+.category-row {
+
+    display: flex;
+
+    gap: 16px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    padding: 3px 3px 12px;
+
+    scroll-behavior: smooth;
+}
+
+
+.category-row::-webkit-scrollbar {
+
+    height: 6px;
+}
+
+
+.category-row::-webkit-scrollbar-track {
+
+    background: #eeeeee;
+}
+
+
+.category-row::-webkit-scrollbar-thumb {
+
+    background: #aaaaaa;
+
+    border-radius: 10px;
+}
+
+
+/* Category card */
+
+.category-card {
+
+    position: relative;
+
+    flex: 0 0 250px;
+
+    height: 180px;
+
+    overflow: hidden;
+
+    border-radius: 4px;
+
+    background: #eee;
+
+    transition: 0.2s ease;
+}
+
+
+.category-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.category-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.35s ease;
+}
+
+
+.category-card:hover img {
+
+    transform: scale(1.05);
+}
+
+
+.category-overlay {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    padding: 18px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.82)
+        );
+}
+
+
+.category-overlay h3 {
+
+    margin: 0 0 5px;
+
+    font-size: 18px;
+}
+
+
+.category-overlay p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #eeeeee;
+}
+
+
+/* =========================================================
+   PRODUCT ROW
+   ========================================================= */
+
+.product-row {
+
+    display: flex;
+
+    flex-direction: row;
+
+    gap: 16px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    padding: 3px 3px 16px;
+
+    scroll-behavior: smooth;
+}
+
+
+.product-row::-webkit-scrollbar {
+
+    height: 7px;
+}
+
+
+.product-row::-webkit-scrollbar-track {
+
+    background: #eeeeee;
+}
+
+
+.product-row::-webkit-scrollbar-thumb {
+
+    background: #aaaaaa;
+
+    border-radius: 10px;
+}
+
+
+.product-row::-webkit-scrollbar-thumb:hover {
+
+    background: #777777;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
+
+.product-card {
+
+    position: relative;
+
+    flex: 0 0 235px;
+
+    width: 235px;
+
+    min-width: 235px;
+
+    background: white;
+
+    border: 1px solid #e0e0e0;
+
+    border-radius: 3px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.product-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+   ========================================================= */
+
+.product-image {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 270px;
+
+    background: #f5f5f5;
+
+    overflow: hidden;
+}
+
+
+.product-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+
+.product-card:hover
+.product-image img {
+
+    transform: scale(1.04);
+}
+
+
+/* Discount */
+
+.discount {
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 10px;
+
+    padding: 5px 8px;
+
+    background: #2874f0;
+
+    color: white;
+
+    border-radius: 2px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* Wishlist */
+
+.wishlist-btn {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    width: 34px;
+
+    height: 34px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: #555;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.15);
+
+    transition: 0.2s ease;
+}
+
+
+.wishlist-btn:hover {
+
+    color: #e53935;
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+   ========================================================= */
+
+.product-info {
+
+    padding: 14px;
+}
+
+
+.product-category {
+
+    margin: 0 0 6px;
+
+    color: #878787;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.product-info h3 {
+
+    margin: 0 0 8px;
+
+    min-height: 38px;
+
+    font-size: 15px;
+
+    line-height: 1.35;
+
+    font-weight: 500;
+
+    color: #212121;
+}
+
+
+/* =========================================================
+   RATING
+   ========================================================= */
+
+.rating {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 8px;
+}
+
+
+.rating span {
+
+    padding: 3px 6px;
+
+    background: #388e3c;
+
+    color: white;
+
+    border-radius: 3px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.rating small {
+
+    color: #878787;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   PRICE
+   ========================================================= */
+
+.price {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.price strong {
+
+    font-size: 18px;
+
+    color: #212121;
+}
+
+
+.price del {
+
+    font-size: 12px;
+
+    color: #878787;
+}
+
+
+/* =========================================================
+   CART BUTTON
+   ========================================================= */
+
+.add-cart {
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 3px;
+
+    background: #ff9f00;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+
+.add-cart:hover {
+
+    background: #fb8c00;
+}
+
+
+.add-cart.added {
+
+    background: #388e3c;
+}
+
+
+/* =========================================================
+   OFFER BANNER
+   ========================================================= */
+
+.fashion-offer {
+
+    width: 94%;
+
+    max-width: 1450px;
+
+    min-height: 190px;
+
+    margin: 18px auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.70),
+            rgba(0, 0, 0, 0.70)
+        ),
+
+        url(
+            "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1600&q=80"
+        );
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.fashion-offer span {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+.fashion-offer h2 {
+
+    margin: 7px 0;
+
+    font-size: 40px;
+}
+
+
+.fashion-offer p {
+
+    margin: 0 0 15px;
+
+    color: #eeeeee;
+
+    font-size: 14px;
+}
+
+
+.fashion-offer a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 20px;
+
+    background: #ffd814;
+
+    color: #111;
+
+    border-radius: 3px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.features {
+
+    width: 94%;
+
+    max-width: 1450px;
+
+    margin: 18px auto;
+
+    padding: 22px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    background: white;
+}
+
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 10px;
+}
+
+
+.feature > i {
+
+    font-size: 25px;
+
+    color: #2874f0;
+}
+
+
+.feature h3 {
+
+    margin: 0 0 4px;
+
+    font-size: 14px;
+}
+
+
+.feature p {
+
+    margin: 0;
+
+    color: #878787;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    margin-top: 25px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: #172337;
+
+    color: #ddd;
+}
+
+
+footer p {
+
+    margin: 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .fashion-hero {
+
+        min-height: 320px;
+
+        padding: 45px 6%;
+    }
+
+
+    .fashion-section,
+    .fashion-offer,
+    .features {
+
+        width: 96%;
+    }
+
+
+    .features {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .fashion-hero {
+
+        min-height: 330px;
+
+        padding: 35px 25px;
+    }
+
+
+    .fashion-hero h1 {
+
+        font-size: 40px;
+    }
+
+
+    .fashion-hero-content > p {
+
+        font-size: 14px;
+    }
+
+
+    .fashion-section {
+
+        width: 97%;
+
+        padding: 16px;
+    }
+
+
+    .section-title h2 {
+
+        font-size: 20px;
+    }
+
+
+    .category-card {
+
+        flex: 0 0 210px;
+
+        height: 155px;
+    }
+
+
+    .product-card {
+
+        flex: 0 0 190px;
+
+        width: 190px;
+
+        min-width: 190px;
+    }
+
+
+    .product-image {
+
+        height: 220px;
+    }
+
+
+    .product-info {
+
+        padding: 11px;
+    }
+
+
+    .product-info h3 {
+
+        font-size: 13px;
+    }
+
+
+    .price strong {
+
+        font-size: 16px;
+    }
+
+
+    .fashion-offer {
+
+        width: 97%;
+
+        min-height: 170px;
+    }
+
+
+    .fashion-offer h2 {
+
+        font-size: 32px;
+    }
+
+
+    .features {
+
+        width: 97%;
+
+        padding: 15px;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+    }
+
+
+    .feature {
+
+        padding: 7px;
+
+        gap: 9px;
+    }
+
+
+    .feature > i {
+
+        font-size: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .product-card {
+
+        flex: 0 0 175px;
+
+        width: 175px;
+
+        min-width: 175px;
+    }
+
+
+    .product-image {
+
+        height: 200px;
+    }
+
+
+    .category-card {
+
+        flex: 0 0 190px;
+    }
+
+}
