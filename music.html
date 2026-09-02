@@ -1,0 +1,3702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Music | Rock Mart</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", Arial, sans-serif;
+            background: #f3f5f7;
+            color: #172033;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        select {
+            font-family: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           TOP STRIP
+        ===================================================== */
+
+        .top-strip {
+
+            background: #101827;
+            color: white;
+
+            min-height: 34px;
+
+            padding: 7px 5%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            font-size: 12px;
+        }
+
+        .top-left,
+        .top-right {
+
+            display: flex;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .top-strip i {
+            margin-right: 5px;
+        }
+
+
+        /* =====================================================
+           MAIN HEADER
+        ===================================================== */
+
+        .main-header {
+
+            background: white;
+
+            padding: 15px 5%;
+
+            display: flex;
+            align-items: center;
+
+            gap: 25px;
+
+            border-bottom: 1px solid #e5e7eb;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+            min-width: 150px;
+        }
+
+        .logo h1 {
+
+            font-size: 27px;
+
+            font-weight: 800;
+
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #ff6b35;
+        }
+
+        .logo small {
+
+            display: block;
+
+            color: #727b88;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* =====================================================
+           SEARCH
+        ===================================================== */
+
+        .search-container {
+
+            flex: 1;
+
+            height: 45px;
+
+            display: flex;
+
+            border: 1px solid #d9dde3;
+
+            border-radius: 8px;
+
+            overflow: hidden;
+        }
+
+        .search-container select {
+
+            width: 120px;
+
+            border: none;
+
+            border-right: 1px solid #ddd;
+
+            outline: none;
+
+            padding: 0 10px;
+
+            background: #f8f9fa;
+
+            color: #555;
+        }
+
+        .search-container input {
+
+            flex: 1;
+
+            border: none;
+
+            outline: none;
+
+            padding: 0 15px;
+
+            font-size: 13px;
+        }
+
+        .search-btn {
+
+            width: 55px;
+
+            border: none;
+
+            background: #ff6b35;
+
+            color: white;
+
+            font-size: 16px;
+
+            transition: 0.2s;
+        }
+
+        .search-btn:hover {
+            background: #e95724;
+        }
+
+
+        /* =====================================================
+           HEADER ACTIONS
+        ===================================================== */
+
+        .header-actions {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .header-action {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            white-space: nowrap;
+        }
+
+        .header-action i {
+            font-size: 20px;
+        }
+
+        .cart-action {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .cart-count {
+
+            position: absolute;
+
+            top: -9px;
+            left: 14px;
+
+            width: 18px;
+            height: 18px;
+
+            border-radius: 50%;
+
+            background: #ff6b35;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 9px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .navbar {
+
+            background: #172033;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 0 5%;
+
+            gap: 4px;
+
+            overflow-x: auto;
+
+            white-space: nowrap;
+        }
+
+        .navbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-link {
+
+            padding: 13px 15px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            transition: 0.2s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+
+            background: #ff6b35;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            width: 94%;
+
+            max-width: 1500px;
+
+            min-height: 410px;
+
+            margin: 22px auto;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 50px 7%;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(8, 13, 25, 0.94),
+                    rgba(8, 13, 25, 0.65),
+                    rgba(8, 13, 25, 0.15)
+                ),
+
+                url("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1800&q=85")
+                center / cover;
+        }
+
+        .hero-content {
+            max-width: 610px;
+            color: white;
+        }
+
+        .hero-tag {
+
+            display: inline-block;
+
+            background: #ff6b35;
+
+            padding: 7px 13px;
+
+            border-radius: 20px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+
+            font-size: clamp(38px, 5vw, 62px);
+
+            line-height: 1.02;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 17px;
+        }
+
+        .hero p {
+
+            color: #e5e9ef;
+
+            max-width: 510px;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+
+            border: none;
+
+            border-radius: 7px;
+
+            padding: 12px 22px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+        .primary-btn {
+
+            background: #ff6b35;
+
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: #e95724;
+        }
+
+        .secondary-btn {
+
+            background: white;
+
+            color: #172033;
+        }
+
+        .secondary-btn:hover {
+            background: #eef1f4;
+        }
+
+
+        /* =====================================================
+           MUSIC PLAYER BAR
+        ===================================================== */
+
+        .music-player {
+
+            width: 94%;
+
+            max-width: 1500px;
+
+            margin: 25px auto;
+
+            background: #172033;
+
+            color: white;
+
+            padding: 15px 20px;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 17px;
+        }
+
+        .player-icon {
+
+            width: 45px;
+            height: 45px;
+
+            border-radius: 7px;
+
+            background: #ff6b35;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 18px;
+        }
+
+        .player-info {
+            flex: 1;
+        }
+
+        .player-info strong {
+
+            display: block;
+
+            font-size: 13px;
+        }
+
+        .player-info span {
+
+            color: #aeb7c5;
+
+            font-size: 10px;
+        }
+
+        .player-controls {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+        }
+
+        .player-controls button {
+
+            border: none;
+
+            background: transparent;
+
+            color: white;
+
+            font-size: 15px;
+        }
+
+        .player-controls .play {
+
+            width: 35px;
+            height: 35px;
+
+            border-radius: 50%;
+
+            background: #ff6b35;
+        }
+
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        .section {
+
+            width: 94%;
+
+            max-width: 1500px;
+
+            margin: 25px auto;
+
+            padding: 25px;
+
+            background: white;
+
+            border-radius: 12px;
+        }
+
+        .section-header {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            margin-bottom: 20px;
+
+            gap: 15px;
+        }
+
+        .section-title h2 {
+
+            font-size: 22px;
+
+            letter-spacing: -0.5px;
+        }
+
+        .section-title p {
+
+            color: #78818e;
+
+            font-size: 12px;
+
+            margin-top: 3px;
+        }
+
+        .view-all {
+
+            color: #ff6b35;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           CATEGORY
+        ===================================================== */
+
+        .category-row {
+
+            display: flex;
+
+            gap: 18px;
+
+            overflow-x: auto;
+
+            padding: 5px 3px 12px;
+        }
+
+        .category-row::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        .category-card {
+
+            min-width: 190px;
+
+            flex: 0 0 190px;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .category-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.09);
+        }
+
+        .category-image {
+
+            height: 170px;
+
+            overflow: hidden;
+
+            background: #f4f5f6;
+        }
+
+        .category-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.4s;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.07);
+        }
+
+        .category-info {
+
+            padding: 13px;
+
+            text-align: center;
+        }
+
+        .category-info h3 {
+            font-size: 14px;
+        }
+
+        .category-info p {
+
+            color: #7b8491;
+
+            font-size: 10px;
+
+            margin-top: 3px;
+        }
+
+
+        /* =====================================================
+           FILTER
+        ===================================================== */
+
+        .filter-bar {
+
+            display: flex;
+
+            gap: 9px;
+
+            overflow-x: auto;
+
+            padding-bottom: 12px;
+
+            margin-bottom: 10px;
+        }
+
+        .filter-btn {
+
+            flex: 0 0 auto;
+
+            padding: 9px 17px;
+
+            border-radius: 20px;
+
+            border: 1px solid #d8dce2;
+
+            background: white;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            transition: 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+
+            background: #172033;
+
+            color: white;
+
+            border-color: #172033;
+        }
+
+
+        /* =====================================================
+           PRODUCT GRID
+        ===================================================== */
+
+        .product-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+        .product-card {
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            background: white;
+
+            transition: 0.3s;
+
+            position: relative;
+        }
+
+        .product-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 28px rgba(0,0,0,0.10);
+        }
+
+        .product-image {
+
+            height: 255px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: #f5f6f7;
+        }
+
+        .product-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.4s;
+        }
+
+        .product-card:hover
+        .product-image img {
+
+            transform: scale(1.05);
+        }
+
+        .discount {
+
+            position: absolute;
+
+            top: 10px;
+            left: 10px;
+
+            background: #e63946;
+
+            color: white;
+
+            padding: 5px 8px;
+
+            border-radius: 4px;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            z-index: 2;
+        }
+
+        .wishlist {
+
+            position: absolute;
+
+            top: 10px;
+            right: 10px;
+
+            width: 34px;
+            height: 34px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.95);
+
+            color: #4b5563;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            z-index: 2;
+        }
+
+        .wishlist:hover,
+        .wishlist.active {
+            color: #e63946;
+        }
+
+        .quick-play {
+
+            position: absolute;
+
+            bottom: 10px;
+            left: 10px;
+
+            width: 36px;
+            height: 36px;
+
+            border-radius: 50%;
+
+            border: none;
+
+            background: rgba(255,255,255,0.95);
+
+            color: #172033;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            z-index: 2;
+
+            transition: 0.2s;
+        }
+
+        .quick-play:hover {
+
+            background: #ff6b35;
+
+            color: white;
+        }
+
+        .product-details {
+            padding: 14px;
+        }
+
+        .brand {
+
+            color: #858d99;
+
+            font-size: 9px;
+
+            text-transform: uppercase;
+
+            font-weight: 800;
+
+            letter-spacing: 0.7px;
+        }
+
+        .product-name {
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin: 4px 0 7px;
+
+            display: -webkit-box;
+
+            -webkit-line-clamp: 2;
+
+            -webkit-box-orient: vertical;
+
+            overflow: hidden;
+        }
+
+        .rating {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 4px;
+
+            background: #0f8a4b;
+
+            color: white;
+
+            padding: 3px 6px;
+
+            border-radius: 4px;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            margin-bottom: 8px;
+        }
+
+        .rating i {
+            font-size: 7px;
+        }
+
+        .price-row {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 12px;
+        }
+
+        .price {
+
+            font-size: 17px;
+
+            font-weight: 800;
+        }
+
+        .old-price {
+
+            color: #9ca3af;
+
+            text-decoration: line-through;
+
+            font-size: 10px;
+        }
+
+        .offer {
+
+            color: #0f8a4b;
+
+            font-size: 9px;
+
+            font-weight: 700;
+        }
+
+        .add-cart {
+
+            width: 100%;
+
+            border: none;
+
+            background: #ff6b35;
+
+            color: white;
+
+            padding: 10px;
+
+            border-radius: 6px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            transition: 0.2s;
+        }
+
+        .add-cart:hover {
+            background: #e95724;
+        }
+
+        .add-cart.added {
+            background: #0f8a4b;
+        }
+
+
+        /* =====================================================
+           PROMO
+        ===================================================== */
+
+        .promo {
+
+            width: 94%;
+
+            max-width: 1500px;
+
+            margin: 28px auto;
+
+            min-height: 190px;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 30px 6%;
+
+            color: white;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(18, 27, 45, 0.95),
+                    rgba(18, 27, 45, 0.6)
+                ),
+
+                url("https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?auto=format&fit=crop&w=1500&q=80")
+                center / cover;
+        }
+
+        .promo-content {
+            max-width: 600px;
+        }
+
+        .promo h2 {
+
+            font-size: 28px;
+
+            margin-bottom: 7px;
+        }
+
+        .promo p {
+
+            color: #d6dce5;
+
+            font-size: 12px;
+
+            margin-bottom: 17px;
+        }
+
+        .coupon {
+
+            display: inline-block;
+
+            background: white;
+
+            color: #172033;
+
+            padding: 10px 17px;
+
+            border-radius: 6px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           FEATURES
+        ===================================================== */
+
+        .features {
+
+            width: 94%;
+
+            max-width: 1500px;
+
+            margin: 28px auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+        .feature {
+
+            background: white;
+
+            border: 1px solid #e6e8eb;
+
+            border-radius: 10px;
+
+            padding: 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+        }
+
+        .feature-icon {
+
+            width: 44px;
+            height: 44px;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: #fff0ea;
+
+            color: #ff6b35;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature h3 {
+            font-size: 12px;
+        }
+
+        .feature p {
+
+            color: #7b8490;
+
+            font-size: 9px;
+
+            margin-top: 2px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            background: #101827;
+
+            color: white;
+
+            margin-top: 40px;
+        }
+
+        .footer-main {
+
+            width: 90%;
+
+            max-width: 1400px;
+
+            margin: auto;
+
+            padding: 45px 0;
+
+            display: grid;
+
+            grid-template-columns:
+                2fr repeat(3, 1fr);
+
+            gap: 40px;
+        }
+
+        .footer-brand h2 {
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+        .footer-brand span {
+            color: #ff6b35;
+        }
+
+        .footer-brand p {
+
+            color: #aab2c0;
+
+            max-width: 330px;
+
+            font-size: 11px;
+        }
+
+        .footer-column h3 {
+
+            font-size: 12px;
+
+            margin-bottom: 14px;
+        }
+
+        .footer-column a {
+
+            display: block;
+
+            color: #aab2c0;
+
+            font-size: 10px;
+
+            margin-bottom: 9px;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+
+            border-top: 1px solid #273142;
+
+            padding: 17px 5%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #8993a3;
+
+            font-size: 10px;
+        }
+
+
+        /* =====================================================
+           TOAST
+        ===================================================== */
+
+        .toast {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            background: #172033;
+
+            color: white;
+
+            padding: 13px 18px;
+
+            border-radius: 7px;
+
+            font-size: 11px;
+
+            box-shadow:
+                0 8px 30px rgba(0,0,0,0.2);
+
+            transform: translateY(100px);
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            transition: 0.3s;
+
+            z-index: 5000;
+        }
+
+        .toast.show {
+
+            transform: translateY(0);
+
+            opacity: 1;
+        }
+
+
+        /* =====================================================
+           NO RESULT
+        ===================================================== */
+
+        .no-result {
+
+            display: none;
+
+            text-align: center;
+
+            padding: 45px;
+
+            color: #777;
+
+            grid-column: 1 / -1;
+        }
+
+        .no-result i {
+
+            font-size: 35px;
+
+            margin-bottom: 12px;
+
+            color: #ff6b35;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width:1200px) {
+
+            .product-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .header-action span {
+                display: none;
+            }
+
+            .header-actions {
+                gap: 13px;
+            }
+
+        }
+
+
+        @media(max-width:900px) {
+
+            .main-header {
+                flex-wrap: wrap;
+            }
+
+            .search-container {
+
+                order: 3;
+
+                flex-basis: 100%;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media(max-width:650px) {
+
+            .top-strip {
+                display: none;
+            }
+
+            .main-header {
+
+                padding: 12px 4%;
+
+                gap: 12px;
+            }
+
+            .logo {
+                min-width: auto;
+            }
+
+            .logo h1 {
+                font-size: 22px;
+            }
+
+            .logo small {
+                display: none;
+            }
+
+            .header-actions {
+
+                margin-left: auto;
+
+                gap: 11px;
+            }
+
+            .header-action i {
+                font-size: 18px;
+            }
+
+            .navbar {
+                padding: 0 3%;
+            }
+
+            .nav-link {
+
+                padding: 11px 12px;
+
+                font-size: 10px;
+            }
+
+            .hero {
+
+                width: 100%;
+
+                margin: 0;
+
+                border-radius: 0;
+
+                min-height: 410px;
+
+                padding: 35px 7%;
+            }
+
+            .hero h2 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 12px;
+            }
+
+            .music-player {
+
+                width: 100%;
+
+                border-radius: 0;
+
+                margin: 0;
+
+                padding: 12px 15px;
+            }
+
+            .player-info span {
+                display: block;
+            }
+
+            .section {
+
+                width: 100%;
+
+                border-radius: 0;
+
+                padding: 20px 15px;
+            }
+
+            .category-card {
+
+                min-width: 155px;
+
+                flex-basis: 155px;
+            }
+
+            .category-image {
+                height: 145px;
+            }
+
+            .product-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 10px;
+            }
+
+            .product-image {
+                height: 215px;
+            }
+
+            .product-details {
+                padding: 10px;
+            }
+
+            .product-name {
+                font-size: 11px;
+            }
+
+            .price {
+                font-size: 15px;
+            }
+
+            .promo {
+
+                width: 100%;
+
+                border-radius: 0;
+
+                min-height: 210px;
+
+                padding: 25px 6%;
+            }
+
+            .features {
+
+                width: 94%;
+
+                grid-template-columns: 1fr;
+            }
+
+            .footer-main {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap: 25px;
+            }
+
+            .footer-brand {
+
+                grid-column: 1 / -1;
+            }
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                gap: 6px;
+
+                text-align: center;
+            }
+
+        }
+
+
+        @media(max-width:400px) {
+
+            .product-image {
+                height: 190px;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     TOP STRIP
+========================================================= -->
+
+<div class="top-strip">
+
+    <div class="top-left">
+
+        <span>
+            <i class="fa-solid fa-truck-fast"></i>
+            Free delivery on orders above ₹499
+        </span>
+
+    </div>
+
+    <div class="top-right">
+
+        <span>Help</span>
+        <span>Track Order</span>
+        <span>Download App</span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="main-header">
+
+    <a href="index.html" class="logo">
+
+        <h1>
+            Rock<span>Mart</span>
+        </h1>
+
+        <small>
+            SHOP • SAVE • SMILE
+        </small>
+
+    </a>
+
+
+    <div class="search-container">
+
+        <select id="searchCategory">
+
+            <option value="all">All</option>
+
+            <option value="headphones">
+                Headphones
+            </option>
+
+            <option value="earbuds">
+                Earbuds
+            </option>
+
+            <option value="speaker">
+                Speakers
+            </option>
+
+            <option value="microphone">
+                Microphones
+            </option>
+
+            <option value="accessories">
+                Accessories
+            </option>
+
+        </select>
+
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search headphones, earbuds, speakers..."
+        >
+
+
+        <button
+            class="search-btn"
+            id="searchBtn"
+        >
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
+
+    </div>
+
+
+    <div class="header-actions">
+
+        <div class="header-action">
+
+            <i class="fa-regular fa-user"></i>
+
+            <span>Login</span>
+
+        </div>
+
+
+        <div class="header-action">
+
+            <i class="fa-regular fa-heart"></i>
+
+            <span>Wishlist</span>
+
+        </div>
+
+
+        <div
+            class="header-action cart-action"
+            id="cartBtn"
+        >
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span
+                class="cart-count"
+                id="cartCount"
+            >
+                0
+            </span>
+
+            <span>Cart</span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="nav-link">
+        <i class="fa-solid fa-house"></i>
+        All
+    </a>
+
+    <a href="mobile.html" class="nav-link">
+        Mobiles
+    </a>
+
+    <a href="macbook.html" class="nav-link">
+        Mac
+    </a>
+
+    <a href="minimemdeal.html" class="nav-link">
+        Today's Deals
+    </a>
+
+    <a href="blockbusterdeal.html" class="nav-link">
+        Best Deals
+    </a>
+
+    <a href="fashion.html" class="nav-link">
+        Fashion
+    </a>
+
+    <a href="clothes.html" class="nav-link">
+        Clothes
+    </a>
+
+    <a href="homeandkitchen.html" class="nav-link">
+        Home & Kitchen
+    </a>
+
+    <a href="music.html" class="nav-link active">
+        Music
+    </a>
+
+    <a href="video.html" class="nav-link">
+        Video
+    </a>
+
+    <a href="subscription.html" class="nav-link">
+        Extra Plus
+    </a>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            SOUND • STYLE • PERFORMANCE
+        </span>
+
+
+        <h2>
+            Feel Every<br>
+            Beat.
+        </h2>
+
+
+        <p>
+            Discover immersive headphones, wireless earbuds,
+            powerful speakers and professional audio gear
+            designed for every moment.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <button
+                class="primary-btn"
+                onclick="scrollToProducts()"
+            >
+
+                Explore Audio
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+            <button
+                class="secondary-btn"
+                onclick="showOffers()"
+            >
+
+                View Offers
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MUSIC PLAYER
+========================================================= -->
+
+<div class="music-player">
+
+    <div class="player-icon">
+
+        <i
+            class="fa-solid fa-music"
+            id="playerIcon"
+        ></i>
+
+    </div>
+
+
+    <div class="player-info">
+
+        <strong id="playerTitle">
+            Rock Mart Audio Collection
+        </strong>
+
+        <span id="playerArtist">
+            Experience premium sound
+        </span>
+
+    </div>
+
+
+    <div class="player-controls">
+
+        <button>
+            <i class="fa-solid fa-backward-step"></i>
+        </button>
+
+        <button
+            class="play"
+            id="playButton"
+        >
+
+            <i class="fa-solid fa-play"></i>
+
+        </button>
+
+        <button>
+            <i class="fa-solid fa-forward-step"></i>
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     CATEGORIES
+========================================================= -->
+
+<section class="section">
+
+    <div class="section-header">
+
+        <div class="section-title">
+
+            <h2>
+                Explore Music & Audio
+            </h2>
+
+            <p>
+                Everything you need for your sound setup
+            </p>
+
+        </div>
+
+        <a
+            href="#products"
+            class="view-all"
+        >
+            View All →
+        </a>
+
+    </div>
+
+
+    <div class="category-row">
+
+
+        <!-- Headphones -->
+
+        <div
+            class="category-card"
+            onclick="filterProducts('headphones')"
+        >
+
+            <div class="category-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80"
+                    alt="Headphones"
+                >
+
+            </div>
+
+            <div class="category-info">
+
+                <h3>
+                    Headphones
+                </h3>
+
+                <p>
+                    Immersive sound
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Earbuds -->
+
+        <div
+            class="category-card"
+            onclick="filterProducts('earbuds')"
+        >
+
+            <div class="category-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=700&q=80"
+                    alt="Wireless Earbuds"
+                >
+
+            </div>
+
+            <div class="category-info">
+
+                <h3>
+                    Wireless Earbuds
+                </h3>
+
+                <p>
+                    Small & powerful
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Speakers -->
+
+        <div
+            class="category-card"
+            onclick="filterProducts('speaker')"
+        >
+
+            <div class="category-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1589003077984-894e133dabab?auto=format&fit=crop&w=700&q=80"
+                    alt="Bluetooth Speaker"
+                >
+
+            </div>
+
+            <div class="category-info">
+
+                <h3>
+                    Speakers
+                </h3>
+
+                <p>
+                    Powerful bass
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Microphones -->
+
+        <div
+            class="category-card"
+            onclick="filterProducts('microphone')"
+        >
+
+            <div class="category-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=700&q=80"
+                    alt="Microphones"
+                >
+
+            </div>
+
+            <div class="category-info">
+
+                <h3>
+                    Microphones
+                </h3>
+
+                <p>
+                    Studio quality
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Accessories -->
+
+        <div
+            class="category-card"
+            onclick="filterProducts('accessories')"
+        >
+
+            <div class="category-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=700&q=80"
+                    alt="Audio Accessories"
+                >
+
+            </div>
+
+            <div class="category-info">
+
+                <h3>
+                    Accessories
+                </h3>
+
+                <p>
+                    Complete your setup
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PRODUCTS
+========================================================= -->
+
+<section
+    class="section"
+    id="products"
+>
+
+    <div class="section-header">
+
+        <div class="section-title">
+
+            <h2>
+                Trending Audio
+            </h2>
+
+            <p>
+                Best-selling audio products
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FILTER -->
+
+    <div class="filter-bar">
+
+        <button
+            class="filter-btn active"
+            data-filter="all"
+        >
+            All
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="headphones"
+        >
+            Headphones
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="earbuds"
+        >
+            Earbuds
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="speaker"
+        >
+            Speakers
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="microphone"
+        >
+            Microphones
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="accessories"
+        >
+            Accessories
+        </button>
+
+    </div>
+
+
+    <div
+        class="product-grid"
+        id="productGrid"
+    >
+
+
+        <!-- =================================================
+             PRODUCT 1
+        ================================================== -->
+
+        <div
+            class="product-card"
+            data-category="headphones"
+            data-name="Wireless Noise Cancelling Headphones"
+        >
+
+            <div class="product-image">
+
+                <span class="discount">
+                    38% OFF
+                </span>
+
+
+                <button class="wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <button
+                    class="quick-play"
+                    onclick="previewProduct('RockSound Pro Headphones','Premium wireless audio')"
+                >
+
+                    <i class="fa-solid fa-play"></i>
+
+                </button>
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80"
+                    alt="Wireless Headphones"
+                >
+
+            </div>
+
+
+            <div class="product-details">
+
+                <span class="brand">
+                    RockSound
+                </span>
+
+                <h3 class="product-name">
+                    Pro Wireless Noise Cancelling Headphones
+                </h3>
+
+                <span class="rating">
+                    4.6
+                    <i class="fa-solid fa-star"></i>
+                </span>
+
+                <div class="price-row">
+
+                    <span class="price">
+                        ₹2,499
+                    </span>
+
+                    <span class="old-price">
+                        ₹3,999
+                    </span>
+
+                    <span class="offer">
+                        38% off
+                    </span>
+
+                </div>
+
+                <button class="add-cart">
+
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PRODUCT 2
+        ================================================== -->
+
+        <div
+            class="product-card"
+            data-category="earbuds"
+            data-name="True Wireless Earbuds"
+        >
+
+            <div class="product-image">
+
+                <span class="discount">
+                    42% OFF
+                </span>
+
+                <button class="wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <button
+                    class="quick-play"
+                    onclick="previewProduct('AirBeat TWS','True wireless experience')"
+                >
+
+                    <i class="fa-solid fa-play"></i>
+
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=700&q=80"
+                    alt="Wireless Earbuds"
+                >
+
+            </div>
+
+
+            <div class="product-details">
+
+                <span class="brand">
+                    AirBeat
+                </span>
+
+                <h3 class="product-name">
+                    True Wireless Earbuds with Deep Bass
+                </h3>
+
+                <span class="rating">
+                    4.5
+                    <i class="fa-solid fa-star"></i>
+                </span>
+
+                <div class="price-row">
+
+                    <span class="price">
+                        ₹1,299
+                    </span>
+
+                    <span class="old-price">
+                        ₹2,249
+                    </span>
+
+                    <span class="offer">
+                        42% off
+                    </span>
+
+                </div>
+
+                <button class="add-cart">
+
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PRODUCT 3
+        ================================================== -->
+
+        <div
+            class="product-card"
+            data-category="speaker"
+            data-name="Portable Bluetooth Speaker"
+        >
+
+            <div class="product-image">
+
+                <span class="discount">
+                    35% OFF
+                </span>
+
+                <button class="wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <button
+                    class="quick-play"
+                    onclick="previewProduct('BassBox Mini','Powerful portable sound')"
+                >
+
+                    <i class="fa-solid fa-play"></i>
+
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1589003077984-894e133dabab?auto=format&fit=crop&w=700&q=80"
+                    alt="Bluetooth Speaker"
+                >
+
+            </div>
+
+
+            <div class="product-details">
+
+                <span class="brand">
+                    BassBox
+                </span>
+
+                <h3 class="product-name">
+                    Portable Bluetooth Speaker with Deep Bass
+                </h3>
+
+                <span class="rating">
+                    4.7
+                    <i class="fa-solid fa-star"></i>
+                </span>
+
+                <div class="price-row">
+
+                    <span class="price">
+                        ₹1,699
+                    </span>
+
+                    <span class="old-price">
+                        ₹2,599
+                    </span>
+
+                    <span class="offer">
+                        35% off
+                    </span>
+
+                </div>
+
+                <button class="add-cart">
+
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PRODUCT 4
+        ================================================== -->
+
+        <div
+            class="product-card"
+            data-category="microphone"
+            data-name="Professional USB Microphone"
+        >
+
+            <div class="product-image">
+
+                <span class="discount">
+                    28% OFF
+                </span>
+
+                <button class="wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <button
+                    class="quick-play"
+                    onclick="previewProduct('Studio Mic Pro','Clear studio recording')"
+                >
+
+                    <i class="fa-solid fa-play"></i>
+
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=700&q=80"
+                    alt="USB Microphone"
+                >
+
+            </div>
+
+
+            <div class="product-details">
+
+                <span class="brand">
+                    StudioX
+                </span>
+
+                <h3 class="product-name">
+                    Professional USB Condenser Microphone
+                </h3>
+
+                <span class="rating">
+                    4.4
+                    <i class="fa-solid fa-star"></i>
+                </span>
+
+                <div class="price-row">
+
+                    <span class="price">
+                        ₹2,899
+                    </span>
+
+                    <span class="old-price">
+                        ₹3,999
+                    </span>
+
+                    <span class="offer">
+                        28% off
+                    </span>
+
+                </div>
+
+                <button class="add-cart">
+
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PRODUCT 5
+        ================================================== -->
+
+        <div
+            class="product-card"
+            data-category="headphones"
+            data-name="Premium Studio Headphones"
+        >
+
+            <div class="product-image">
+
+                <span class="discount">
+                    31% OFF
+                </span>
+
+                <button class="wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <button
+                    class="quick-play"
+                    onclick="previewProduct('Studio Max','Professional monitoring')"
+                >
+
+                    <i class="fa-solid fa-play"></i>
+
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=700&q=80"
+                    alt="Studio Headphones"
+                >
+
+            </div>
+
+
+            <div class="product-details">
+
+                <span class="brand">
+                    AudioMax
+                </span>
+
+                <h3 class="product-name">
+                    Premium Studio Monitoring Headphones
+                </h3>
+
+                <span class="rating">
+                    4.8
+                    <i class="fa-solid fa-star"></i>
+                </span>
+
+                <div class="price-row">
+
+                    <span class="price">
+                        ₹3,449
+                    </span>
+
+                    <span class="old-price">
+                        ₹4,999
+                    </span>
+
+                    <span class="offer">
+                        31% off
+                    </span>
+
+                </div>
+
+                <button class="add-cart">
+
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PRODUCT 6
+        ================================================== -->
+
+        <div
+            class="product-card"
+            data-category="earbuds"
+            data-name="Sport Wireless Earbuds"
+        >
+
+            <div class="product-image">
+
+                <span class="discount">
+                    40% OFF
+                </span>
+
+                <button class="wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <button
+                    class="quick-play"
+                    onclick="previewProduct('SportBeat','Music for your workout')"
+                >
+
+                    <i class="fa-solid fa-play"></i>
+
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=700&q=80"
+                    alt="Sport Earbuds"
+                >
+
+            </div>
+
+
+            <div class="product-details">
+
+                <span class="brand">
+                    SportBeat
+                </span>
+
+                <h3 class="product-name">
+                    Wireless Sport Earbuds with Secure Fit
+                </h3>
+
+                <span class="rating">
+                    4.3
+                    <i class="fa-solid fa-star"></i>
+                </span>
+
+                <div class="price-row">
+
+                    <span class="price">
+                        ₹999
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,699
+                    </span>
+
+                    <span class="offer">
+                        40% off
+                    </span>
+
+                </div>
+
+                <button class="add-cart">
+
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PRODUCT 7
+        ================================================== -->
+
+        <div
+            class="product-card"
+            data-category="speaker"
+            data-name="Smart Home Speaker"
+        >
+
+            <div class="product-image">
+
+                <span class="discount">
+                    25% OFF
+                </span>
+
+                <button class="wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <button
+                    class="quick-play"
+                    onclick="previewProduct('HomeSound','Smart home audio')"
+                >
+
+                    <i class="fa-solid fa-play"></i>
+
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=700&q=80"
+                    alt="Smart Speaker"
+                >
+
+            </div>
+
+
+            <div class="product-details">
+
+                <span class="brand">
+                    HomeSound
+                </span>
+
+                <h3 class="product-name">
+                    Smart Wireless Home Speaker
+                </h3>
+
+                <span class="rating">
+                    4.5
+                    <i class="fa-solid fa-star"></i>
+                </span>
+
+                <div class="price-row">
+
+                    <span class="price">
+                        ₹2,249
+                    </span>
+
+                    <span class="old-price">
+                        ₹2,999
+                    </span>
+
+                    <span class="offer">
+                        25% off
+                    </span>
+
+                </div>
+
+                <button class="add-cart">
+
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PRODUCT 8
+        ================================================== -->
+
+        <div
+            class="product-card"
+            data-category="accessories"
+            data-name="Premium Audio Cable"
+        >
+
+            <div class="product-image">
+
+                <span class="discount">
+                    20% OFF
+                </span>
+
+                <button class="wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <button
+                    class="quick-play"
+                    onclick="previewProduct('AudioCable Pro','Reliable audio connection')"
+                >
+
+                    <i class="fa-solid fa-play"></i>
+
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1612444530582-fc66183b16f8?auto=format&fit=crop&w=700&q=80"
+                    alt="Audio Cable"
+                >
+
+            </div>
+
+
+            <div class="product-details">
+
+                <span class="brand">
+                    SoundLink
+                </span>
+
+                <h3 class="product-name">
+                    Premium High-Fidelity Audio Cable
+                </h3>
+
+                <span class="rating">
+                    4.2
+                    <i class="fa-solid fa-star"></i>
+                </span>
+
+                <div class="price-row">
+
+                    <span class="price">
+                        ₹399
+                    </span>
+
+                    <span class="old-price">
+                        ₹499
+                    </span>
+
+                    <span class="offer">
+                        20% off
+                    </span>
+
+                </div>
+
+                <button class="add-cart">
+
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- NO RESULT -->
+
+        <div
+            class="no-result"
+            id="noResult"
+        >
+
+            <i class="fa-solid fa-music"></i>
+
+            <h3>
+                No products found
+            </h3>
+
+            <p>
+                Try another search or category.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROMO
+========================================================= -->
+
+<section
+    class="promo"
+    id="offerSection"
+>
+
+    <div class="promo-content">
+
+        <h2>
+            Upgrade Your Sound
+        </h2>
+
+        <p>
+            Get an additional discount on selected audio products.
+            Turn up the volume without turning up the price.
+        </p>
+
+        <div class="coupon">
+            USE CODE: SOUND20
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURES
+========================================================= -->
+
+<section class="features">
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+        </div>
+
+        <div>
+
+            <h3>
+                Fast Delivery
+            </h3>
+
+            <p>
+                Quick delivery across India
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+        </div>
+
+        <div>
+
+            <h3>
+                Easy Returns
+            </h3>
+
+            <p>
+                Simple return & replacement
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+        <div>
+
+            <h3>
+                Secure Payment
+            </h3>
+
+            <p>
+                100% secure transactions
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+
+            <i class="fa-solid fa-headset"></i>
+
+        </div>
+
+        <div>
+
+            <h3>
+                Audio Support
+            </h3>
+
+            <p>
+                We're here whenever you need
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-main">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                Rock<span>Mart</span>
+            </h2>
+
+            <p>
+                Your everyday marketplace for electronics,
+                fashion, home essentials, music products and much more.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Music
+            </h3>
+
+            <a href="#">
+                Headphones
+            </a>
+
+            <a href="#">
+                Earbuds
+            </a>
+
+            <a href="#">
+                Speakers
+            </a>
+
+            <a href="#">
+                Microphones
+            </a>
+
+            <a href="#">
+                Accessories
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Customer Service
+            </h3>
+
+            <a href="#">
+                Contact Us
+            </a>
+
+            <a href="#">
+                Track Order
+            </a>
+
+            <a href="#">
+                Returns
+            </a>
+
+            <a href="#">
+                Shipping
+            </a>
+
+            <a href="#">
+                FAQs
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Rock Mart
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="fashion.html">
+                Fashion
+            </a>
+
+            <a href="clothes.html">
+                Clothes
+            </a>
+
+            <a href="subscription.html">
+                Extra Plus
+            </a>
+
+            <a href="#">
+                About Us
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Rock Mart. All Rights Reserved.
+        </span>
+
+        <span>
+            Made with ❤️ for music lovers
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    class="toast"
+    id="toast"
+>
+    Product added to cart!
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+    /* =====================================================
+       CART
+    ===================================================== */
+
+    let cart =
+        JSON.parse(localStorage.getItem("cart")) || [];
+
+
+    const cartCount =
+        document.getElementById("cartCount");
+
+
+    function updateCartCount() {
+
+        let total = 0;
+
+        cart.forEach(item => {
+
+            total += item.quantity || 1;
+
+        });
+
+        cartCount.textContent = total;
+
+    }
+
+
+    updateCartCount();
+
+
+    /* =====================================================
+       ADD TO CART
+    ===================================================== */
+
+    const cartButtons =
+        document.querySelectorAll(".add-cart");
+
+
+    cartButtons.forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            const card =
+                this.closest(".product-card");
+
+
+            const name =
+                card.querySelector(".product-name")
+                    .textContent
+                    .trim();
+
+
+            const priceText =
+                card.querySelector(".price")
+                    .textContent
+                    .replace("₹", "")
+                    .replace(",", "")
+                    .trim();
+
+
+            const price =
+                Number(priceText);
+
+
+            const existingProduct =
+                cart.find(item => item.name === name);
+
+
+            if (existingProduct) {
+
+                existingProduct.quantity++;
+
+            } else {
+
+                cart.push({
+
+                    name: name,
+
+                    price: price,
+
+                    quantity: 1
+
+                });
+
+            }
+
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+
+            updateCartCount();
+
+
+            this.innerHTML =
+                '<i class="fa-solid fa-check"></i> Added';
+
+
+            this.classList.add("added");
+
+
+            showToast(
+                "Product added to cart!"
+            );
+
+
+            setTimeout(() => {
+
+                this.innerHTML =
+                    '<i class="fa-solid fa-cart-plus"></i> Add to Cart';
+
+                this.classList.remove("added");
+
+            }, 1500);
+
+        });
+
+    });
+
+
+    /* =====================================================
+       WISHLIST
+    ===================================================== */
+
+    let wishlist =
+        JSON.parse(localStorage.getItem("wishlist")) || [];
+
+
+    const wishlistButtons =
+        document.querySelectorAll(".wishlist");
+
+
+    wishlistButtons.forEach(button => {
+
+        const card =
+            button.closest(".product-card");
+
+
+        const name =
+            card.querySelector(".product-name")
+                .textContent
+                .trim();
+
+
+        if (wishlist.includes(name)) {
+
+            button.classList.add("active");
+
+            button.innerHTML =
+                '<i class="fa-solid fa-heart"></i>';
+
+        }
+
+
+        button.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+
+                const index =
+                    wishlist.indexOf(name);
+
+
+                if (index === -1) {
+
+                    wishlist.push(name);
+
+                    this.classList.add("active");
+
+                    this.innerHTML =
+                        '<i class="fa-solid fa-heart"></i>';
+
+                    showToast(
+                        "Added to wishlist!"
+                    );
+
+                } else {
+
+                    wishlist.splice(index, 1);
+
+                    this.classList.remove("active");
+
+                    this.innerHTML =
+                        '<i class="fa-regular fa-heart"></i>';
+
+                    showToast(
+                        "Removed from wishlist"
+                    );
+
+                }
+
+
+                localStorage.setItem(
+                    "wishlist",
+                    JSON.stringify(wishlist)
+                );
+
+            }
+        );
+
+    });
+
+
+    /* =====================================================
+       FILTER BUTTONS
+    ===================================================== */
+
+    const filterButtons =
+        document.querySelectorAll(".filter-btn");
+
+
+    filterButtons.forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const filter =
+                    this.getAttribute("data-filter");
+
+
+                filterButtons.forEach(btn => {
+
+                    btn.classList.remove("active");
+
+                });
+
+
+                this.classList.add("active");
+
+
+                displayProducts(filter);
+
+            }
+        );
+
+    });
+
+
+    function filterProducts(category) {
+
+        document
+            .getElementById("products")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+
+        filterButtons.forEach(button => {
+
+            button.classList.remove("active");
+
+
+            if (
+                button.getAttribute("data-filter")
+                === category
+            ) {
+
+                button.classList.add("active");
+
+            }
+
+        });
+
+
+        displayProducts(category);
+
+    }
+
+
+    function displayProducts(category) {
+
+        const cards =
+            document.querySelectorAll(".product-card");
+
+
+        let visible = 0;
+
+
+        cards.forEach(card => {
+
+            const cardCategory =
+                card.getAttribute("data-category");
+
+
+            if (
+                category === "all"
+                ||
+                cardCategory === category
+            ) {
+
+                card.style.display = "";
+
+                visible++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        const noResult =
+            document.getElementById("noResult");
+
+
+        noResult.style.display =
+            visible === 0
+                ? "block"
+                : "none";
+
+    }
+
+
+    /* =====================================================
+       SEARCH
+    ===================================================== */
+
+    const searchInput =
+        document.getElementById("searchInput");
+
+
+    const searchBtn =
+        document.getElementById("searchBtn");
+
+
+    const searchCategory =
+        document.getElementById("searchCategory");
+
+
+    function performSearch() {
+
+        const searchText =
+            searchInput.value
+                .toLowerCase()
+                .trim();
+
+
+        const category =
+            searchCategory.value;
+
+
+        const cards =
+            document.querySelectorAll(".product-card");
+
+
+        let visible = 0;
+
+
+        cards.forEach(card => {
+
+            const name =
+                card.getAttribute("data-name")
+                    .toLowerCase();
+
+
+            const cardCategory =
+                card.getAttribute("data-category");
+
+
+            const matchesText =
+                name.includes(searchText);
+
+
+            const matchesCategory =
+                category === "all"
+                ||
+                cardCategory === category;
+
+
+            if (
+                matchesText
+                &&
+                matchesCategory
+            ) {
+
+                card.style.display = "";
+
+                visible++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        document.getElementById("noResult")
+            .style.display =
+                visible === 0
+                    ? "block"
+                    : "none";
+
+
+        document
+            .getElementById("products")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    }
+
+
+    searchBtn.addEventListener(
+        "click",
+        performSearch
+    );
+
+
+    searchInput.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Enter") {
+
+                performSearch();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       SHOP BUTTON
+    ===================================================== */
+
+    function scrollToProducts() {
+
+        document
+            .getElementById("products")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    }
+
+
+    /* =====================================================
+       OFFERS
+    ===================================================== */
+
+    function showOffers() {
+
+        document
+            .getElementById("offerSection")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+
+        showToast(
+            "Use code SOUND20 for extra 20% OFF!"
+        );
+
+    }
+
+
+    /* =====================================================
+       PRODUCT PREVIEW
+    ===================================================== */
+
+    function previewProduct(title, artist) {
+
+        document
+            .getElementById("playerTitle")
+            .textContent = title;
+
+
+        document
+            .getElementById("playerArtist")
+            .textContent = artist;
+
+
+        showToast(
+            "Preview selected: " + title
+        );
+
+    }
+
+
+    /* =====================================================
+       MUSIC PLAYER BUTTON
+    ===================================================== */
+
+    const playButton =
+        document.getElementById("playButton");
+
+
+    let playing = false;
+
+
+    playButton.addEventListener(
+        "click",
+        function () {
+
+            playing = !playing;
+
+
+            if (playing) {
+
+                this.innerHTML =
+                    '<i class="fa-solid fa-pause"></i>';
+
+                showToast(
+                    "Playing audio preview"
+                );
+
+            } else {
+
+                this.innerHTML =
+                    '<i class="fa-solid fa-play"></i>';
+
+                showToast(
+                    "Audio preview paused"
+                );
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       TOAST
+    ===================================================== */
+
+    function showToast(message) {
+
+        const toast =
+            document.getElementById("toast");
+
+
+        toast.textContent =
+            message;
+
+
+        toast.classList.add("show");
+
+
+        setTimeout(() => {
+
+            toast.classList.remove("show");
+
+        }, 2200);
+
+    }
+
+
+    /* =====================================================
+       CART CLICK
+    ===================================================== */
+
+    document
+        .getElementById("cartBtn")
+        .addEventListener(
+            "click",
+            function () {
+
+                if (cart.length === 0) {
+
+                    showToast(
+                        "Your cart is empty!"
+                    );
+
+                } else {
+
+                    showToast(
+                        `You have ${cart.length} product(s) in cart`
+                    );
+
+                }
+
+            }
+        );
+
+
+    /* =====================================================
+       PAGE LOAD
+    ===================================================== */
+
+    console.log(
+        "Rock Mart Music page loaded successfully!"
+    );
+
+
+</script>
+
+</body>
+
+</html>
